@@ -1,0 +1,21 @@
+// Common/global variables, etc. available to all styles
+
+$width-wide: 690px !default;  // 978px
+$width-medium: 558px !default;  // 768px
+$width-narrow: 480px !default;
+
+// Padding used for layout margins
+$pad-min: 15px !default;
+$pad-narrow: 25px !default;
+$pad-medium: 35px !default;
+$pad-wide: 45px !default;
+
+$pop-gap: 0.75em;
+
+$separator-width: 6px;
+
+$indented-lists: true !default;
+
+$header-font-size: 1em !default;
+$header-padding-top: 1.5em !default;
+$header-padding-bottom: 1.5em !default;

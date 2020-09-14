@@ -1,0 +1,321 @@
+/* non highlighted code colors */
+$pre-bg: $base03 !default;
+$pre-border: rgba(0,0,0,.8); //darken($base02, 5) !default;
+$pre-color: $base1 !default;
+
+$code-title-bg:  rgba(0,0,0,.3); //#112;
+$code-lineno-bg: $code-title-bg;
+
+$code-line-height: 1.1em;
+
+.highlight, html .gist .gist-file .gist-syntax .gist-highlight {
+  table td.code { width: 100%; }
+  @include border-radius(.4em); border: 1px solid $pre-border !important
+}
+.highlight .line-numbers, html .gist .gist-file .gist-syntax .highlight .line_numbers {
+  text-align: right;
+  font-size: .8em !important;
+  line-height: $code-line-height !important;
+  @if $solarized == light {
+    background: lighten($base03, 1) !important;
+    border-right: 1px solid darken($base02, 2) !important;
+    @include box-shadow(lighten($base03, 2) -1px 0 inset);
+    text-shadow: lighten($base02, 2) 0 -1px;
+  } @else {
+    background: $code-lineno-bg !important;
+    //border-right: 1px solid darken($base03, 2) !important;
+    //@include box-shadow(lighten($base02, 2) -1px 0 inset);
+    //text-shadow: darken($base02, 10) 0 -1px;
+  }
+  span { color: $base01 !important; }
+  padding: .8em !important;
+  @include border-radius(0);
+}
+
+figure.code, .gist-file, pre {
+  @include box-shadow(rgba(#000, .06) 0 0 10px);
+  .highlight pre { @include box-shadow(none); }
+}
+
+.gist .highlight, figure.code .highlight {
+  @include selection(adjust-color($base03, $lightness: 23%, $saturation: -65%), $text-shadow: $base03 0 1px);
+}
+html .gist .gist-file {
+  margin-bottom: 1.8em;
+  position: relative;
+  border: none;
+  padding-top: image-height("code_bg.png") !important;
+  .highlight {
+    margin-bottom: 0;
+  }
+  .gist-syntax {
+    border-bottom: 0 !important;
+    background: none !important;
+    .gist-highlight {
+      background: $base03 !important;
+    }
+    .highlight pre {
+      @extend .pre-code;
+      padding: 0;
+    }
+  }
+  .gist-meta {
+   padding: .6em 0.8em;
+   border: 1px solid lighten($base02, 2) !important;
+   color: $base01;
+   font-size: .9em !important;
+   @if $solarized == light {
+     background: lighten($base03, 2);
+     border: 1px solid $pre-border !important;
+     border-top: 1px solid lighten($base03, 2) !important;
+   } @else {
+     background: $base02;
+   }
+   @extend .sans;
+   line-height: 1.5em;
+    a {
+      color: mix($base1, $base01) !important;
+      @include hover-link;
+      &:hover { color: $base1 !important; }
+    }
+    a[href*='#file'] {
+      position: absolute; top: 0; left:0; right:-10px;
+      color: #474747 !important;
+      @extend .code-title;
+      &:hover { color: $link-color !important; }
+    }
+    a[href*=raw]{
+      @extend .download-source;
+      top: .4em;
+    }
+  }
+}
+pre {
+  background: $pre-bg;
+  @include border-radius(.4em);
+  @extend .mono;
+  //border: 1px solid $pre-border;
+  line-height: $code-line-height !important;
+  font-size: .8em;
+  //margin-bottom: 2.1em;
+  //padding: .8em 1em;
+  color: $pre-color;
+  overflow: auto;
+}
+h3.filename {
+  @extend .code-title;
+  + pre { @include border-top-radius(0px); }
+}
+
+/* Inline code */
+
+/* No dark background */
+.codec-inline {
+  code {
+    @extend .mono;
+    display: inline-block;
+    white-space: pre-wrap;
+    font-size: .9em;
+    line-height: 1em;
+    //color: #fff;
+  }
+  pre code {
+    font-size: .8em !important;
+    }
+}
+
+/* Dark background */
+.code-inline {
+  code {
+    @extend .mono;
+    display: inline-block;
+    white-space: pre-wrap;
+    background-color: rgba(0,0,0,0.05);
+    font-size: .825em;
+    line-height: 1em;
+    //color: #fff;
+    @include border-radius(.4em);
+    padding: .1em .2em .2em .2em;
+    margin-top: -.05em;
+    margin-bottom: -.2em;
+    //margin: 1px 0;
+    box-shadow: inset 0 1px 10px rgba(0,0,0,.3),
+      0 1px 0 rgba(255,255,255,.1),
+      0 -1px 0 rgba(0,0,0,.5);
+  }
+  pre code {
+    font-size: .8em !important;
+    }
+}
+
+p, li {
+  @extend .code-inline
+}
+
+.pre-code {
+  @extend .mono;
+  overflow: scroll;
+  overflow-y: hidden;
+  display: block;
+  padding: .8em;
+  overflow-x: auto;
+  line-height: $code-line-height;
+  background: #212129 !important;
+  color: $base1 !important;
+  span { color: $base1 !important; }
+  span { font-style: normal !important; font-weight: normal !important; }
+
+  .c      { color: $base01 !important; font-style: italic !important; }                                 /* Comment */
+  .c1     { color: #80C4FF !important; font-style: italic !important; }                                 /* Comment.Single */
+  .cm     { color: #80B0FE !important; font-style: italic !important; }                                 /* Comment.Multiline */
+  .cp     { color: $base01 !important; font-style: italic !important;  }                                /* Comment.Preproc */
+  .cs     { color: $base01 !important; font-weight: bold !important; font-style: italic !important; }   /* Comment.Special */
+  
+  .err    { color: #00FF00 !important; background: none !important; }                 /* Error */
+  .p      { color: #00FF00 !important; }                                              /* Operator */
+  .o      { color: #00FF00 !important; }                                              /* Operator */
+  .ow     { color: $solar-cyan !important; font-weight: bold !important; }            /* Operator.Word */
+  
+  .k      { color: #C4FFC4 !important; }                                              /* Keyword */
+  .kc     { color: $solar-green !important; font-weight: bold !important; }           /* Keyword.Constant */
+  .kd     { color: $solar-blue !important; }                                          /* Keyword.Declaration */
+  .kp     { color: $solar-orange !important; font-weight: bold !important; }          /* Keyword.Pseudo */
+  .kr     { color: $solar-magenta !important; font-weight: bold !important; }         /* Keyword.Reserved */
+  .kt     { color: $solar-cyan !important; }                                          /* Keyword.Type */
+  
+  .n      { color: #FFFFFF !important; }                                              /* Name */
+  .nl     { color: #FFFFFF !important; }                                              /* Name.Label */
+  .na     { color: $solar-blue !important; }                                          /* Name.Attribute */
+  .nb     { color: $solar-green !important; }                                         /* Name.Builtin */
+  .nc     { color: $solar-magenta !important;}                                        /* Name.Class */
+  .no     { color: $solar-yellow !important; }                                        /* Name.Constant */
+  .ne     { color: $solar-blue !important; font-weight: bold !important; }            /* Name.Exception */
+  .nf     { color: $solar-blue !important; font-weight: bold !important; }            /* Name.Function */
+  .nn     { color: $solar-yellow !important; }                                        /* Name.Namespace */
+  .nt     { color: $solar-blue !important; font-weight: bold !important; }            /* Name.Tag */
+  .vg     { color: $solar-blue !important; }                                          /* Name.Variable.Global */
+  .vi     { color: $solar-blue !important; }                                          /* Name.Variable.Instance */
+  .nv     { color: $solar-blue !important; }                                          /* Name.Variable */
+  .nx     { color: #FFFFFF !important; }                                              
+  
+  .m      { color: $solar-cyan !important; }                                          /* Literal.Number */
+  .mi     { color: #B9B9FF !important; }                                              /* Literal.Number.Integer */
+  .mf     { color: #899CFF !important; }                                              /* Literal.Number.Float */
+  .mh     { color: $solar-cyan !important; }                                          /* Literal.Number.Hex */
+  
+  .s      { color: #FFB0E0 !important; }                                              /* Literal.String */
+  .sd     { color: $solar-cyan !important; }                                          /* Literal.String.Doc */
+  .s2     { color: #FFB0E0 !important; }                                              /* Literal.String.Double */
+  .se     { color: $solar-red !important; }                                           /* Literal.String.Escape */
+  .si     { color: $solar-blue !important; }                                          /* Literal.String.Interpol */
+  .sr     { color: $solar-cyan !important; }                                          /* Literal.String.Regex */
+  .s1     { color: #e070b0 !important; }                                              /* Literal.String.Single */
+  
+  .gd     { color: $base1 !important; background-color: mix($solar-red, $base03, 25%) !important; display: inline-block; }  /* Generic.Deleted */
+  .gd .x  { color: $base1 !important; background-color: mix($solar-red, $base03, 35%) !important; display: inline-block; }  /* Generic.Deleted.Specific */
+  .ge     { color: $base1 !important; font-style: italic !important; }                  /* Generic.Emph */
+  .gh     { color: $base01 !important; }                                                /* Generic.Heading */
+  .gi     { color: $base1 !important; background-color: mix($solar-green, $base03, 20%) !important; display: inline-block; }  /* Generic.Inserted */
+  .gi .x  { color: $base1 !important; background-color: mix($solar-green, $base03, 40%) !important; display: inline-block; }  /* Generic.Inserted.Specific */
+  .gs     { color: $base1 !important; font-weight: bold !important; }                   /* Generic.Strong */
+  .gu     { color: $solar-violet !important; }                                          /* Generic.Subheading */
+  
+  //.gr     { color: #aa0000 }                                          /* Generic.Error */
+  //.go     { color: #888888 }                                          /* Generic.Output */
+  //.gp     { color: #555555 }                                          /* Generic.Prompt */
+  //.gt     { color: #aa0000 }                                          /* Generic.Traceback */
+  //.ni     { color: #800080 }                                          /* Name.Entity */
+  //.bp     { color: #999999 }                                          /* Name.Builtin.Pseudo */
+  //.vc     { color: #008080 }                                          /* Name.Variable.Class */
+  //.w      { color: #bbbbbb }                                          /* Text.Whitespace */
+  //.mo     { color: #009999 }                                          /* Literal.Number.Oct */
+  //.sb     { color: #d14 }                                             /* Literal.String.Backtick */
+  //.sc     { color: #d14 }                                             /* Literal.String.Char */
+  //.sh     { color: #d14 }                                             /* Literal.String.Heredoc */
+  //.sx     { color: #d14 }                                             /* Literal.String.Other */
+  //.ss     { color: #990073 }                                          /* Literal.String.Symbol */
+  //.il     { color: #009999 }                                          /* Literal.Number.Integer.Long */
+  div { .gd, .gd .x, .gi, .gi .x { display: inline-block; width: 100%; }}
+}
+
+.highlight, .gist-highlight {
+  pre { background: none; @include border-radius(0px); border: none; padding: 0; margin: 0; }
+  margin-bottom: 1.8em;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+$solar-scroll-bg: rgba(#fff, .15);
+$solar-scroll-thumb: rgba(#fff, .2);
+@if $solarized == light {
+  $solar-scroll-bg: rgba(#000, .15);
+  $solar-scroll-thumb: rgba(#000, .15);
+}
+
+pre, .highlight, .gist-highlight {
+  //&::-webkit-scrollbar {  height: .5em; background: $solar-scroll-bg; }
+  //&::-webkit-scrollbar-thumb:horizontal { background: $solar-scroll-thumb;  -webkit-border-radius: 4px; border-radius: 4px }
+  overflow-y: hidden;
+}
+
+.gutter {
+  padding-right: .5em;
+  .lineno {
+    background: $code-title-bg;
+    padding: 0 .5em;
+    //margin: 0 .5em;
+  }
+}
+
+.highlight code { 
+  @extend .pre-code; background: #000;
+}
+
+figure.highlight { 
+  margin: 1em 0 2em 0;
+}
+
+figure.code {
+  background: none;
+  padding: 0;
+  border: 0;
+  margin-bottom: 1.5em;
+  pre { margin-bottom: 0; }
+  figcaption {
+    position: relative;
+    bottom: -5px;  // Move down to cover rounded top of code
+    @extend .code-title;
+    a { @extend .download-source; }
+  }
+  .highlight {
+    margin-bottom: 0;
+  }
+}
+
+/* Code header */
+.code-title {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.1em;
+  //padding-top: .33em;  // Gives empty titles height
+  //padding-bottom: .33em;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.9);
+  color: $title-color;
+  margin-bottom: 0;
+  @include border-top-radius(5px);
+  @extend .sans;
+  background: $code-title-bg;
+  //border: 1px solid #565656;
+  //border-bottom: 0;
+}
+
+.download-source {
+  position: absolute; right: .8em;
+  @include hover-link;
+  color: #666 !important;
+  z-index: 1;
+  font-size: .9em;
+  text-shadow: #cbcccc 0 1px 0;
+  padding-left: 3em;
+}

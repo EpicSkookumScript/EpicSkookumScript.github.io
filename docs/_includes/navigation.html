@@ -1,0 +1,277 @@
+<nav role="navigation">
+
+  <aside id="sidebar-site">
+    <!--Hamburger menu-->
+    <input type="checkbox"/>
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <section class="menu">
+      <div class="menu-scroll tocs">
+
+        <h1>On this site</h1>
+        <ul>
+          <li class="{% if page.section == 'home' %}current{% endif %}"><a href="{{ root_url }}/">Home page</a></li>
+          <li class="subpage{% if page.title == "What is it?" %} current{% endif %}">
+            <a href="/about/">What is it?</a></li>
+          <li class="subpage{% if page.title == "Show me some code!" %} current{% endif %}">
+            <a href="/about/look/">Show me some code!</a></li>
+          <li class="{% if page.section == 'unreal' %}current{% endif %}"><a href="{{ root_url }}/unreal/">Unreal Engine Plugin</a></li>
+          <li class="subpage{% if page.title == "Awesome features" %} current{% endif %}">
+            <a href="/about/features/">Awesome features</a></li>
+          <li class="subpage{% if page.title == "The team" %} current{% endif %}">
+            <a href="/about/team/">The team</a></li>
+          <li class="subpage{% if page.title == "SkookumScript's origin story" %} current{% endif %}">
+            <a href="/about/origin/">Origin story</a></li>
+          <li class="subpage{% if page.title == "Frequently asked questions" %} current{% endif %}">
+            <a href="/about/faq/">F.A.Q.</a></li>
+        </ul>
+      
+        <p>
+          <a href="https://skookum.chat/"><h3><em class="tip">Forum &#x1F4AC;</em></h2></a>
+        </p>
+
+        <ul>
+          <h2>Docs</h2>
+          <li {% if page.title == "Documentation intro" %}class="current"{% endif %}>
+            <a href="/docs/">Documentation intro</a>
+          </li>
+          <li {% if page.title == "SkookumScript UE4 Plugin installation and setup" %}class="current"{% endif %}>
+            <a href="/docs/ue4/setup/">UE4 Plugin setup</a>
+          </li>
+          <li {% if page.title == "Primer" %}class="current"{% endif %}>
+            <a href="/docs/v3.0/">Primer <em class="mark">« Start here!</em></a>
+          </li>
+          <li {% if page.title == "Unreal Engine 4 Plugin quick start" %}class="current"{% endif %}>
+            <a href="/docs/ue4/quickstart/">UE4 Plugin quick start</a>
+          </li>
+          <li {% if page.title == "Set up a UE4 project to use SkookumScript" %}class="current"{% endif %}>
+            <a href="/docs/ue4/setup-sk-proj/">Set up a SkookumScript UE4 project</a>
+          </li>
+          <li {% if page.title == "Tutorials" %}class="current"{% endif %}>
+            <a href="/docs/tutorials/">Tutorials</a>
+          </li>
+          
+          <ul>
+            <h3>SkookumIDE</h3>
+            <ul>
+              <h4>Widgets (tab views)</h4>
+              <li {% if page.title == "Workbench (REPL) widgets" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/ide/workbench/">Workbench (REPL)</a>
+              </li>
+              <ul>
+                <li {% if page.title == "Parser error checking" %}class="current"{% endif %}>
+                  <a href="/docs/v3.0/ide/parser-error-checking/">Parser error checking</a>
+                </li>
+              </ul>
+              <li {% if page.title == "Log widget" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/ide/log/">Log</a>
+              </li>
+              <li {% if page.title == "Classes widget" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/ide/classes/">Classes</a>
+              </li>
+              <li {% if page.title == "Members widget" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/ide/members/">Members</a>
+              </li>  
+                <ul>
+                  <li {% if page.title == "New Class or Member pane" %}class="current"{% endif %}>
+                    <a href="/docs/v3.0/ide/new/">New Class or Member pane</a>
+                  </li>
+                </ul>
+              <li {% if page.title == "Overlays widget" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/ide/overlays/">Overlays</a>
+              </li>
+              <li {% if page.title == "Editor widgets" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/ide/editors/">Editor</a>
+              </li>
+              <li {% if page.title == "Errors widget" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/ide/errors/">Errors</a>
+              </li>
+            </ul>
+
+            <ul>
+              <h4>Advanced</h4>
+              <li {% if page.title == "SkookumIDE command line" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/ide/command-line/">Command line arguments</a>
+              </li>
+              <li {% if page.title == "Communicating with remote (and local) runtimes" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/ide/ip-addresses/">Remote runtime considerations<br>(often consoles, mobile and mutiplayer)</a>
+              </li>
+            </ul>
+          </ul>
+          
+          <ul>
+            <h3>Unreal Engine 4</h3> 
+            <li {% if page.title == "Add SkookumScript to a UE4 C++ project" %}class="current"{% endif %}>
+              <a href="/docs/ue4/add-sk-ue4-c/">Add Sk to a UE4 C++ project</a>
+            </li>
+            <li {% if page.title == "Disable or remove SkookumScript in a UE4 project" %}class="current"{% endif %}>
+              <a href="/docs/ue4/disable-remove-sk/">Disable or remove SkookumScript</a>
+            </li>
+            <li {% if page.title == "Instance-specific scripts" %}class="current"{% endif %}>
+              <a href="/docs/ue4/instance-specific-scripts/">Instance-specific scripts</a>
+            </li>
+          </ul>
+    
+          <ul>
+            <h3>Language reference</h3>
+            <ul>
+              <h4>General</h4>
+              <li {% if page.title == "Syntax" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/lang/syntax/">Syntax</a>
+              </li>
+              <li {% if page.title == "Expressions" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/lang/expressions/">Expressions</a>
+              </li>
+              <li {% if page.title == "Whitespace" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/lang/whitespace/">Whitespace</a>
+              </li>
+              <li {% if page.title == "Comments" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/lang/comments/">Comments</a>
+              </li>
+              <li {% if page.title == "Type system" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/lang/typesystem/">Type system</a>
+              </li>
+            </ul>
+            
+            <ul>
+              <h4>Literals</h4>
+              <li {% if page.title == "List" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/lang/literals/list/">List</a>
+              </li>
+              <li {% if page.title == "Closure" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/lang/literals/closure/">Closure</a>
+              </li>
+            </ul>
+          
+            <ul>
+              <h4>Invocations</h4>
+              <li {% if page.title == "Routines" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/lang/invocations/routines/">Routines</a>
+              </li>
+            </ul>
+    
+            <ul>
+              <h4>Identifiers</h4>
+              <li {% if page.title == "Data Members" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/lang/identifiers/data-members/">Data members</a>
+              </li>
+              <ul>
+                <li {% if page.title == "Why @ and @@ for data?" %}class="current"{% endif %}>
+                  <a href="/docs/v3.0/lang/identifiers/why-at-for-data/">Why @ and @@ for data?</a>
+                </li>
+              </ul>
+              <li {% if page.title == "Object IDs" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/lang/identifiers/object-ids/">Object IDs</a>
+              </li>
+            </ul>
+    
+            <ul>
+              <h4>Flow control</h4>
+              <li {% if page.title == "Code block" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/lang/flow/code-block/">Code block</a>
+              </li>
+              <li {% if page.title == "Conditionals" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/lang/flow/conditionals/">Conditionals</a>
+              </li>
+              <li {% if page.title == "Concurrency" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/lang/flow/concurrency/">Coroutines and structured concurrency</a>
+              </li>
+            </ul>
+    
+            <ul>
+              <h4>Type Primitives</h4>
+              <li {% if page.title == "Conversion" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/lang/primitives/conversion/">Class conversion</a>
+              </li>
+              <li>
+                <a href="/docs/v3.0/#class-cast">Class cast</a>
+              </li>
+            </ul>
+    
+            <ul>
+              <h4>Layout and files</h4>
+              <li {% if page.title == "Class meta files" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/lang/layout/class-meta-files/">Class meta files</a>
+              </li>
+              <li {% if page.title == "Overlays" %}class="current"{% endif %}>
+                <a href="/docs/v3.0/lang/layout/overlays/">Overlays</a>
+              </li>
+            </ul>
+          </ul>  
+          
+          <ul>
+            <h3>Runtime</h3>
+            <ul>
+              <h4>Add-on features</h4>
+              <li {% if page.title == "Demand Script Loading" %}class="current"{% endif %}>
+              <a href="/docs/v3.0/rt/demand-loading/">Demand Script Loading</a>
+              </li>
+            </ul>
+          </ul>
+        
+          <ul>
+            <h3>Extending SkookumScript</h3>
+            <li {% if page.title == "End-user modding" %}class="current"{% endif %}>
+              <a href="/docs/extend/modding/">End-user modding</a>
+            </li>
+            <li {% if page.title == "Calling from C++ to SkookumScript" %}class="current"{% endif %}>
+              <a href="/docs/extend/calling-from-c/">Calling from C++ to SkookumScript</a>
+            </li>
+          </ul>  
+        </ul>  
+      </div>  <!--menu-scroll-->
+    </section>  <!--menu-->
+  </aside>  <!--sidebar-site-->
+  
+  <aside id="sidebar-page">
+    <!--Hamburger menu-->
+    <input type="checkbox"/>
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <section class="menu">
+      <div class="menu-scroll">
+        {% if page.sidebar-page != "none" %}
+          <h1>On this page</h1>
+          {% if page.numbered-headers == true %}
+            {% include toc.html html=content ordered=true class="tocs-nums" id="page-toc" h_max=5 %}
+          {% else %}  
+            {% include toc.html html=content ordered=false class="tocs" id="page-toc" h_max=5 %}
+          {% endif %}
+        {% endif %}  
+
+        {% if site.posts.size > 0 %}
+          <h1>Recent blog posts</h1> <!--a href="/blog/"></a-->
+          <ul id="recent_posts">
+            {% for post in site.posts limit: site.recent_posts %}
+              <li class="post">
+                <a href="{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a>
+              </li>
+            {% endfor %}
+            <li>
+              <a href="/blog/archives/">[Blog archive...]</a>
+            </li>
+          </ul>
+        {% endif %}  
+      </div>  <!--menu-scroll-->
+    </section>  <!--menu-->
+  </aside>  <!--sidebar-page-->
+
+  <!--
+  {% if site.simple_search %}
+    <form action="{{ site.simple_search }}" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="sitesearch" value="{{ site.url | shorthand_url }}" />
+        <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+      </fieldset>
+    </form>
+  {% endif %}
+  -->
+</nav>

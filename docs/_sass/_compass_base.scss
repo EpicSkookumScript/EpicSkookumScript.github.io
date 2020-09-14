@@ -1,0 +1,427 @@
+@import "compass_support";
+@import "compass_support_deprecated";
+@import "compass_transition";
+
+
+// Reset the box model measurements.
+@mixin reset-box-model {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+
+// The legacy support threshold for has-layout.
+// Defaults to the $critical-usage-threshold.
+$has-layout-support-threshold: $critical-usage-threshold !default;
+
+// The `zoom` approach generates less CSS but does not validate.
+// Set this to `block` to use the display-property to hack the
+// element to gain layout.
+$default-has-layout-approach: zoom !default;
+
+// This mixin causes an element matching the selector
+// to gain the "hasLayout" property in internet explorer.
+// More information on [hasLayout](http://reference.sitepoint.com/css/haslayout).
+@mixin has-layout($approach: $default-has-layout-approach) {
+  @if support-legacy-browser("ie", "7", $threshold: $has-layout-support-threshold) {
+    @if $approach == zoom {
+      @include has-layout-zoom;
+    } @else if $approach == block {
+      @include has-layout-block;
+    } @else {
+      @warn "Unknown has-layout approach: #{$approach}";
+      @include has-layout-zoom;
+    }
+  }
+}
+
+@mixin has-layout-zoom {
+  @if support-legacy-browser("ie", "7", $threshold: $has-layout-support-threshold) {
+    *zoom: 1;
+  }
+}
+
+@mixin has-layout-block {
+  @if support-legacy-browser("ie", "7", $threshold: $has-layout-support-threshold) {
+    // This makes ie6 get layout
+    display: inline-block;
+    // and this puts it back to block
+    & { display: block; }
+  }
+}
+
+
+// This basic method is preferred for the usual case, when positioned
+// content will not show outside the bounds of the container.
+//
+// Recommendations include using this in conjunction with a width.
+// Credit: [quirksmode.org](http://www.quirksmode.org/blog/archives/2005/03/clearing_floats.html)
+@mixin clearfix {
+  overflow: hidden;
+  @include has-layout;
+}
+
+// This is an updated version of the PIE clearfix method that reduces the amount of CSS output.
+// If you need to support Firefox before 3.5 you need to use `legacy-pie-clearfix` instead.
+//
+// Adapted from: [A new micro clearfix hack](http://nicolasgallagher.com/micro-clearfix-hack/)
+@mixin pie-clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  @include has-layout;
+}
+
+
+// The the user threshold for border-radius support. Defaults to `$graceful-usage-threshold`
+$border-radius-threshold: $graceful-usage-threshold !default;
+
+// The length of a border-radius to be used by default.
+$default-border-radius: 5px !default;
+
+// Round all corners by a specific amount, defaults to value of `$default-border-radius`.
+//
+// When two values are passed, the first is the horizontal radius
+// and the second is the vertical radius.
+//
+// Note: webkit does not support shorthand syntax for several corners at once.
+// So in the case where you pass several values only the first will be passed to webkit.
+//
+// Examples:
+//
+//     .simple   { @include border-radius(4px, 4px); }
+//     .compound { @include border-radius(2px 5px, 3px 6px); }
+//     .crazy    { @include border-radius(1px 3px 5px 7px, 2px 4px 6px 8px)}
+//
+// Which generates:
+//
+//     .simple {
+//       -moz-border-radius: 4px / 4px;
+//       -webkit-border-radius: 4px 4px;
+//       border-radius: 4px / 4px; }
+//     
+//     .compound {
+//       -moz-border-radius: 2px 5px / 3px 6px;
+//       -webkit-border-radius: 2px 3px;
+//       border-radius: 2px 5px / 3px 6px; }
+//     
+//     .crazy {
+//       -moz-border-radius: 1px 3px 5px 7px / 2px 4px 6px 8px;
+//       -webkit-border-radius: 1px 2px;
+//       border-radius: 1px 3px 5px 7px / 2px 4px 6px 8px; }
+@mixin border-radius($radius: $default-border-radius, $vertical-radius: false) {
+  @include with-each-prefix(border-radius, $border-radius-threshold) {
+    @if $current-prefix == -webkit {
+      // Legacy Webkit didn't understand the official shorthand syntax for specifying a vertical radius.
+      $legacy-webkit-radius: first-value-of($radius);
+      @if $vertical-radius { $legacy-webkit-radius: append($legacy-webkit-radius, first-value-of($vertical-radius)); }
+      @include prefix-prop(border-radius, $legacy-webkit-radius);
+    } @else {
+      // Official syntax for everyone else
+      @include prefix-prop(border-radius, if($vertical-radius, #{$radius} / #{$vertical-radius}, $radius));
+    }
+  }
+}
+
+// Round radius at position by amount.
+//
+// * legal values for `$vert`: `top`, `bottom`
+// * legal values for `$horz`: `left`, `right`
+@mixin border-corner-radius($vert, $horz, $radius: $default-border-radius) {
+  @include with-each-prefix(border-radius, $border-radius-threshold) {
+    @if $current-prefix == -moz {
+      // Support for mozilla's syntax for specifying a corner
+      @include prefix-prop("border-radius-#{$vert}#{$horz}", $radius);
+    } @else {
+      // Official syntax for everyone else
+      @include prefix-prop("border-#{$vert}-#{$horz}-radius", $radius);
+    }
+  }
+}
+
+// Round top-left corner only
+@mixin border-top-left-radius($radius: $default-border-radius) {
+  @include border-corner-radius(top, left, $radius); }
+
+// Round top-right corner only
+@mixin border-top-right-radius($radius: $default-border-radius) {
+  @include border-corner-radius(top, right, $radius); }
+
+// Round bottom-left corner only
+@mixin border-bottom-left-radius($radius: $default-border-radius) {
+  @include border-corner-radius(bottom, left, $radius); }
+
+// Round bottom-right corner only
+@mixin border-bottom-right-radius($radius: $default-border-radius) {
+  @include border-corner-radius(bottom, right, $radius); }
+
+// Round both top corners by amount
+@mixin border-top-radius($radius: $default-border-radius) {
+  @include border-top-left-radius($radius);
+  @include border-top-right-radius($radius); }
+
+// Round both right corners by amount
+@mixin border-right-radius($radius: $default-border-radius) {
+  @include border-top-right-radius($radius);
+  @include border-bottom-right-radius($radius); }
+
+// Round both bottom corners by amount
+@mixin border-bottom-radius($radius: $default-border-radius) {
+  @include border-bottom-left-radius($radius);
+  @include border-bottom-right-radius($radius); }
+
+// Round both left corners by amount
+@mixin border-left-radius($radius: $default-border-radius) {
+  @include border-top-left-radius($radius);
+  @include border-bottom-left-radius($radius); }
+
+
+// The prefixed support threshold for box-shadow.
+// Defaults to the $graceful-usage-threshold.
+$box-shadow-support-threshold: $graceful-usage-threshold !default;
+
+// The default color for box shadows
+$default-box-shadow-color: #333333 !default;
+
+// The default horizontal offset. Positive is to the right.
+$default-box-shadow-h-offset: 0px !default;
+
+// The default vertical offset. Positive is down.
+$default-box-shadow-v-offset: 0px !default;
+
+// The default blur length.
+$default-box-shadow-blur: 5px !default;
+
+// The default spread length.
+$default-box-shadow-spread: null !default;
+
+// The default shadow inset: inset or null (for standard shadow).
+$default-box-shadow-inset: null !default;
+
+@function default-box-shadow() {
+  @return compact(if($default-box-shadow-inset, inset, null)
+                  $default-box-shadow-h-offset
+                  $default-box-shadow-v-offset
+                  $default-box-shadow-blur
+                  $default-box-shadow-spread
+                  $default-box-shadow-color);
+}
+
+// Provides cross-browser for Webkit, Gecko, and CSS3 box shadows
+// when one or more box shadows are needed.
+// Each shadow argument should adhere to the standard css3 syntax
+// for the box-shadow property.
+@mixin box-shadow($shadow...) {
+  $shadow: set-arglist-default($shadow, default-box-shadow());
+  @include prefixed-properties(css-boxshadow, $box-shadow-support-threshold, (box-shadow: $shadow));
+}
+
+
+$gradient-support-threshold: $graceful-usage-threshold !default;
+$svg-gradient-shim-threshold: $graceful-usage-threshold !default;
+$owg-threshold: $graceful-usage-threshold !default;
+
+// These browsers support svg but not gradients
+// so we can shim the gradient with an inline svg file.
+$browsers-supporting-svg-but-not-gradients: (ie: "9", opera: "9.5-9.6");
+
+// These browsers require the old webkit gradient syntax
+$browsers-supporting-old-webkit-gradients: (android: ("2.1", "3"));
+
+@mixin each-gradient-prefix($values) {
+  @if prefixed(-svg, $values) {
+    @include for-legacy-browsers($browsers-supporting-svg-but-not-gradients,
+                                 $svg-gradient-shim-threshold)
+    {
+      @include with-prefix(-svg) {
+        @content;
+      }
+    }
+  }
+  @if prefixed(-owg, $values) {
+    @include for-legacy-browsers($browsers-supporting-old-webkit-gradients,
+                                 $owg-threshold)
+    {
+      @include with-prefix(-owg) {
+        @content;
+      }
+    }
+  }
+  @include with-each-prefix(css-gradients, $gradient-support-threshold) {
+    @if $current-prefix {
+      @if prefixed($current-prefix, $values) {
+        @content;
+      } @else if $debug-browser-support {
+        /* There is not a value that needs to be prefixed with #{$current-prefix} in: #{$values} */
+      }
+    } @else {
+      @content;
+    }
+  }
+}
+
+@mixin image-property($property, $values...) {
+  @include each-gradient-prefix($values) {
+    @if $current-prefix {
+      #{$property}: prefix($current-prefix, $values);
+    } @else {
+      #{$property}: $values;
+    }
+    @content;
+  }
+}
+
+// Background property support for vendor prefixing within values.
+@mixin background($backgrounds...) {
+  @include image-property(background, $backgrounds...);
+}
+
+
+// The the user threshold for background-clip support. Defaults to `$critical-usage-threshold`
+$background-clip-support-threshold: $critical-usage-threshold !default;
+
+// The default border-box model: [border-box | padding-box | content-box]
+$default-background-clip: padding-box !default;
+
+// Clip the background (image and color) at the edge of the padding, border, or content.
+//   $clip... : [padding-box | border-box | content-box]
+@mixin background-clip($clip...) {
+  $output: ();
+  $deprecated: ();
+
+  @if (length($clip) > 0) {
+    @each $layer in $clip {
+      $output: append($output, unquote($layer), comma);
+      $deprecated: append($deprecated, legacy-box($layer), comma);
+    }
+  } @else {
+    $output: $default-background-clip;
+    $deprecated: legacy-box($default-background-clip);
+  }
+
+  @include with-each-prefix(background-img-opts, $background-clip-support-threshold) {
+    @if $current-prefix == -moz or $current-prefix == -webkit {
+      // Legacy versions of Mozilla support a different syntax, prefixed.
+      @include prefix-prop(background-clip, $deprecated);
+    } @else {
+      @include prefix-prop(background-clip, $output);
+    }
+  }
+}
+
+
+// The prefixed support threshold for box-sizing.
+// Defaults to the $graceful-usage-threshold.
+$box-sizing-support-threshold: $critical-usage-threshold !default;
+
+// The default box-sizing model when no argument is provided to the box-sizing mixin: [ content-box | border-box | padding-box ]
+//
+// The browser default is content-box, compass defaults to border-box.
+$default-box-sizing: border-box !default;
+
+// Change the box model for Mozilla, Webkit, IE8 and the future
+//
+//     $box-model: [ content-box | border-box | padding-box ]
+@mixin box-sizing($box-model: $default-box-sizing) {
+  $box-model: unquote($box-model);
+  @include prefixed-properties(css3-boxsizing, $box-sizing-support-threshold, (box-sizing: $box-model));
+}
+
+
+// Set all the colors for a link with one mixin call.
+// Order of arguments is:
+//
+// 1. normal
+// 2. hover
+// 3. active
+// 4. visited
+// 5. focus
+//
+// Those states not specified will inherit.
+// Mixin to an anchor link like so:
+//     a
+//       +link-colors(#00c, #0cc, #c0c, #ccc, #cc0)
+
+@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+  color: $normal;
+  @if $visited {
+    &:visited {
+      color: $visited; } }
+  @if $focus {
+    &:focus {
+      color: $focus; } }
+  @if $hover {
+    &:hover {
+      color: $hover; } }
+  @if $active {
+    &:active {
+      color: $active; } } }
+
+
+// a link that only has an underline when you hover over it
+@mixin hover-link {
+  text-decoration: none;
+  &:hover, &:focus {
+    text-decoration: underline; } }
+
+
+// Turn off the bullet for an element of a list
+@mixin no-bullet {
+  list-style-image : none;
+  list-style-type  : none;
+  margin-left      : 0;
+}
+
+// The legacy support threshold for float.
+// Defaults to the $critical-usage-threshold.
+$legacy-float-support-threshold: $critical-usage-threshold !default;
+
+// Direction independent float mixin that fixes the
+// [double-margin bug in IE5/6](http://www.positioniseverything.net/explorer/doubled-margin.html)
+@mixin float($side: left) {
+  float: unquote($side);
+  @if support-legacy-browser("ie", "6", $threshold: $legacy-float-support-threshold) {
+    display: inline; } }
+
+// Can be mixed into any selector that target a ul or ol that is meant
+// to have a horizontal layout. Used to implement +horizontal-list.
+@mixin horizontal-list-container {
+  @include reset-box-model;
+  @include clearfix; }
+
+// Can be mixed into any li selector that is meant to participate in a horizontal layout.
+// Used to implement +horizontal-list.
+//
+// :last-child is not fully supported
+// see http://www.quirksmode.org/css/contents.html#t29 for the support matrix
+//
+// IE8 ignores rules that are included on the same line as :last-child
+// see http://www.richardscarrott.co.uk/posts/view/ie8-last-child-bug for details
+//
+// Setting `$padding` to `false` disables the padding between list elements
+@mixin horizontal-list-item($padding: 4px, $direction: left) {
+  @include no-bullet;
+  white-space: nowrap;
+  @include float($direction);
+  @if $padding {
+    padding: {
+      left: $padding;
+      right: $padding;
+    }
+    &:first-child #{if(support-legacy-browser("ie", "6", $threshold: $css-sel2-support-threshold), ', &.first', '')} { padding-#{$direction}: 0; }
+    &:last-child { padding-#{opposite-position($direction)}: 0; }
+    @if support-legacy-browser("ie", "7", $threshold: $css-sel2-support-threshold) {
+      &.last { padding-#{opposite-position($direction)}: 0; } }
+  }
+}
+
+// A list(ol,ul) that is layed out such that the elements are floated left and won't wrap.
+// This is not an inline list.
+//
+// Setting `$padding` to `false` disables the padding between list elements
+@mixin horizontal-list($padding: 4px, $direction: left) {
+  @include horizontal-list-container;
+  li {
+    @include horizontal-list-item($padding, $direction); } }

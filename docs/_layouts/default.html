@@ -1,0 +1,24 @@
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
+{% include head.html %}
+
+  <body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} class="wrap">
+    {% include navigation.html %}
+    <div class="grid">
+
+      <header role="banner" class="no-padding">
+        <div class="unit">
+          {% include header.html %}
+        </div>
+      </header>
+      
+      <div id="main">
+        <div id="content">
+          {{ content | expand_urls: root_url }}
+        </div>
+      </div>
+    </div>
+
+    <footer role="contentinfo">{% include footer.html %}</footer>
+  
+  </body>
+</html>

@@ -1,0 +1,4 @@
+docs/_site/
+.jekyll-cache/
+GemFile
+Gemfile.lock

@@ -1,0 +1,291 @@
+$sans: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+//$sans: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+//$sans: "From The Stars Light", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+//$sans: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+//$sans: "Titillium Web", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+//$sans: "Cairo", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$serif: "Baskerville", serif !default;
+
+$heading-font-family: "From the Stars Rg", "Verdana", sans-serif !default;
+//$heading-font-family: "From The Stars SemiBold", "Verdana", sans-serif !default;
+//$heading-font-family: "Magra", "Verdana", sans-serif !default;
+//$heading-font-family: "Signika Negative", "Verdana", sans-serif !default;
+//$heading-font-family: "Lato Bold", "Verdana", sans-serif !default;
+//$heading-font-family: "Roboto Condensed", "Verdana", sans-serif !default;
+//$heading-font-family: "Chau Philomene One", "Verdana", sans-serif !default;
+//$heading-font-family: "Passion One", "Verdana", sans-serif;
+//$heading-font-family: "Yanone Kaffeesatz", "Verdana", sans-serif;
+
+$header-title-font-family: $heading-font-family !default;
+$header-subtitle-font-family: $heading-font-family !default;
+
+$mono: "Source Code Pro", "Lucida Console", monospace !default;
+//$mono: "Skookum Coder", "Lucida Console", monospace;
+//$mono: "Ubuntu Mono", "Lucida Console", monospace;
+//$mono: "Oxygen Mono", "Lucida Console", monospace;
+
+
+// Fonts
+.heading {
+  font-family: $heading-font-family;
+  color: $title-color;
+  line-height: 1.075em;
+  text-shadow: .075em .075em .1em #000;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.sans {
+  font-family: $sans;
+  }
+.serif {
+  font-family: $serif;
+  }
+.mono {
+  font-family: $mono;
+  }
+
+body {
+  line-height: 1.5em;
+  color: $text-color;
+  @extend .sans;
+}
+
+body > div > header h1 {
+  font-size: 2em;
+  @extend .heading;
+  font-family: $header-title-font-family;
+  //color: $title-color;
+  //font-weight: normal;
+  //margin-bottom: 0.5em;
+}
+
+body > div > header h2 {
+  font-family: $header-subtitle-font-family;
+  color: $title-color;
+}
+
+h1 {
+  @extend .heading;
+  text-rendering: optimizelegibility;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+  font-size: 1.7em;
+}
+h2, section h1 {
+  @extend .heading;
+  text-rendering: optimizelegibility;
+  margin-bottom: 0.25em;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+h3, section h2, section section h1 {
+  @extend .heading;
+  text-rendering: optimizelegibility;
+  margin-bottom: 0.25em;
+  font-weight: normal;
+  font-size: 1.35em;
+}
+h4, section h3, section section h2, section section section h1 {
+  @extend .heading;
+  text-rendering: optimizelegibility;
+  margin-bottom: 0.25em;
+  font-weight: normal;
+  font-size: 1.25em;
+}
+h5, section h4, section section h3 {
+  @extend .heading;
+  text-rendering: optimizelegibility;
+  margin-bottom: 0.25em;
+  font-weight: normal;
+  font-size: 1.15em;
+}
+h6, section h5, section section h4, section section section h3 {
+  @extend .heading;
+  text-rendering: optimizelegibility;
+  margin-bottom: 0.25em;
+  font-weight: normal;
+  font-size: 1.05em;
+}
+
+// Increase for big screens
+@media only screen and (min-width: $width-wide) {
+  body { font-size: 1.15em; }
+}
+
+// Inline headers
+.hdr {
+  @extend h4;
+  margin: 0;
+  color: $note-header;
+  line-height: 1.5em;
+  font-size: 1.2em;
+  font-style: normal;
+  text-rendering: optimizelegibility;
+  font-weight: normal;
+}
+
+.hdr-style {
+  text-rendering: optimizelegibility;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+
+
+/* Main body text properties */
+p, ul, ol {  // article blockquote, 
+  margin-bottom: 1.05em;
+  text-shadow: 0 0 .1em #000;
+  }
+
+ul { list-style-type: disc;
+  ul { list-style-type: circle; margin-bottom: 0px;
+    ul { list-style-type: square; margin-bottom: 0px; }}}
+
+ol { list-style-type: decimal;
+  ol { list-style-type: lower-alpha; margin-bottom: 0px;
+    ol { list-style-type: lower-roman; margin-bottom: 0px; }}}
+
+ul, ol { &, ul, ol { margin-left: 1.3em; }}
+ul, ol { ul, ol { margin-bottom: 0em; }}
+
+strong { font-weight: bold; }
+
+em { font-style: italic; }
+
+sup, sub { font-size: 0.75em; position: relative;  display: inline-block; padding: 0 .2em; line-height: .8em;}
+sup { top: -.5em; }
+sub { bottom: -.5em; }
+
+.ftn {
+  @extend sup;
+}
+
+.footnotes {
+  //outline: green dotted 1px;
+  //padding-top: .5em;
+  //border-top: 3px solid $separator-color;
+  
+  ol {
+    font-size: .85em;
+    list-style: none;  // Disable the normal item numbering
+    counter-reset: li; // Initiate a counter
+    margin-left: 0;    // Remove the default left margin
+    padding-left: 0;   // Remove the default left padding
+  }
+  
+  li {
+    position:relative;
+    line-height: 1.1em;
+    padding-left: 1.25em;
+    padding-bottom: .5em;
+    
+    &:before {
+      @extend .ftn;
+      content: counter(li);  // Use the counter as content
+      counter-increment: li; // Increment the counter by 1
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1.25em;
+      padding: 0;
+    }
+    
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.footline {
+  width: 50%;
+  @include gradient-border;
+  margin-top: 2em;
+  margin-bottom: .5em;
+}
+  
+a[rev='footnote']{ font-size: .75em; padding: 0 .3em; line-height: 1; }
+
+q { font-style: italic;
+  &:before { content: "\201C"; }
+  &:after { content: "\201D"; }
+}
+
+em, dfn { font-style: italic; }
+
+strong, dfn { font-weight: bold; }
+
+del, s { text-decoration: line-through; }
+
+abbr, acronym { border-bottom: 1px dotted; cursor: help; }
+
+pre, code, tt { @extend .mono; }
+
+hr {
+  @include gradient-border;
+  margin-bottom: .5em;
+}
+
+small { font-size: .8em; }
+
+big { font-size: 1.2em; }
+
+/*
+article blockquote {
+  $bq-margin: 1.2em;
+  font-style: italic;
+  position: relative;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  padding-left: 1em;
+  border-left: 4px solid rgba($text-color-light, .5);
+  cite {
+    font-style: italic;
+    a { color: $text-color-light !important; word-wrap: break-word; }
+    &:before { content: '\2014'; padding:{right: .3em; left: .3em;} color: $text-color-light; }
+  }
+  @media only screen and (min-width: 992px) {
+    padding-left: 1.5em;
+    border-left-width: 4px;
+  }
+}
+*/
+
+.pullquote-right:before,
+.pullquote-left:before {
+  /* Reset metrics. */
+  padding: 0;
+  border: none;
+
+  /* Content */
+  content: attr(data-pullquote);
+
+  /* Pull out to the right, modular scale based margins. */
+  float: right;
+  width: 45%;
+  margin: .5em 0 1em 1.5em;
+
+  /* Baseline correction */
+  position: relative;
+  top: 7px;
+  
+  font-size: 1.1em;
+  line-height: 1.25em;
+  text-shadow: .25em .25em .5em #000;
+}
+
+.pullquote-left:before {
+  /* Make left pullquotes align properly. */
+  float: left;
+  margin: .5em 1.5em 1em 0;
+}
+
+/* @extend this to force long lines of continuous text to wrap */
+.force-wrap {
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+

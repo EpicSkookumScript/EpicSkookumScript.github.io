@@ -1,0 +1,435 @@
+.nav-only {display: none!important;}
+
+nav {
+  //position: relative;
+  //background-color: $nav-bg;
+  //@include background($nav-bg-front, $nav-bg-back);
+  //border: {
+  //  top: 1px solid $nav-border-top;
+  //  bottom: 1px solid $nav-border-bottom; }
+  //margin-top: 0;
+  //padding-top: .3em;
+  //padding-bottom: .35em;
+  .nav-only {display: block!important;}
+
+  h1 {
+    padding-top: .5em;
+    @include gradient-border;
+  }
+
+  form {
+    //background: #05f;
+    //width: 50%;
+    @include background-clip(padding-box);
+    .search {
+      padding: .2em .3em .2em .3em;
+      font-size: .85em;
+      @extend .sans;
+      line-height: 1.1em;
+      width: 100%;
+      @include border-radius(.6em);
+      @include background-clip(padding-box);
+      @include box-shadow(lighten($nav-bg, 2) 0 1px);
+      background-color: lighten($nav-bg, 15);
+      border: 1px solid $nav-border;
+      color: $sidebar-search-text-color;
+      &:focus {
+        //width: 100%;
+        color: #050505;
+        border-color: #80b1df;
+        @include box-shadow(#80b1df 0 0 4px, #80b1df 0 0 3px inset);
+        background-color: #eef;
+        outline: none;
+      }
+    }
+  }  // form
+
+  //fieldset[role=search]{ float: right; width: 48%; }
+
+  //fieldset.mobile-nav{ float: left; width: 48%;
+  //  select{ width: 100%; font-size: .8em; border: 1px solid #888;}
+  //}
+
+  .post {
+    @include gradient-border($width: 1px);
+  }
+
+  @media only screen and (min-width: 569px) {
+    // Search
+    form {
+      //float: right;
+      //text-align: right;
+      display: block;
+      margin-top: .4em;
+      //margin-bottom: 2em;
+      //margin-right: .75em;
+      //background-color: #262;
+      width: 100%;
+      .search {
+        //width: 100%;
+        padding: .2em .3em .2em .3em;
+        font-size: .95em;
+        line-height: 1.5em;
+      }
+    }
+
+    ul[data-subscription$=email] + form {
+      width: 100%; //$sidebar-width-medium - $pad-medium*2 - $sidebar-pad-medium - 58px;
+      .search { width: 100%; }
+    }
+
+    //fieldset.mobile-nav { display: none; }
+    fieldset[role=search]{ width: 100%; }
+  }
+
+  @media only screen and (min-width: 973px) {
+    ul[data-subscription$=email] + form {
+      width: 100%; //$sidebar-width-wide - $pad-wide - $sidebar-pad-wide*2 - 58px;
+    }
+  }
+}  // nav
+
+.no-placeholder {
+  body > nav .search {
+    background: lighten($nav-bg, 15) image-url('search.png') .3em .25em no-repeat;
+    text-indent: 1.3em;
+  }
+}
+
+// Sidebar variables
+// - Uses: $width-wide, $width-medium, $page-bg, $link-color, $title-color
+
+$menu-width:        250px;
+$menu-width-rel:    80vw;
+$burger-width:      33px;
+$burger-width-show: $width-wide + $menu-width + $menu-width - $burger-width;
+$burger-width-mini: $width-medium;
+
+$menu-color-bg:     rgba($page-bg, .9);
+$menu-color-scroll: adjust-color($page-bg, $lightness: -8%);
+$burger-color:      $link-color;
+$burger-color-text: $title-color;
+
+.menu
+{
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  padding: 0px;
+  padding-top: $burger-width + 2px;
+  padding-left: 20px;
+  margin: 0px;
+  background: $menu-color-bg;
+  max-width: $menu-width-rel;
+
+  -webkit-font-smoothing: antialiased; // Stops flickering of text in safari
+  transform-origin: 0% 0%;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+  letter-spacing: -0.5px;
+  code {padding-left: 1em;}
+
+  .menu-scroll
+  {
+    height: 100%;
+    overflow: auto;
+
+    &::-webkit-scrollbar
+    {
+    width: .85em;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 2px #888;
+      background: $menu-color-scroll;
+    }
+  }  // .menu-scroll
+
+  li
+  {
+    font-size: 1.1em;
+    line-height: 1em;
+    padding-top: .15em;
+    padding-bottom: .15em;
+    margin-left: .66em;
+    &:last-child { padding-bottom: .1em; }
+    
+    li
+    {
+      font-size: .9em;
+    }
+  }
+
+  ul
+  {
+    list-style-type: none;
+    margin-left: 0;
+    margin-bottom: .25em;
+
+    ul
+    {
+      margin-left: .5em;
+    }
+  }
+  
+  ol
+  {
+    margin-left: 0;
+    margin-bottom: .2em;
+
+    li
+    {
+      text-indent: -.75em;
+      margin-left: .75em;
+    }
+  }
+
+  .current
+  {
+    font-weight: bold;
+    padding: .07em .3em;
+    //margin-left: -.03em;
+    margin-left: .3em;
+    border-radius: .5em;
+    background-color: rgba(0,0,0,.25);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 1px 5px rgba(0,0,0,.5);
+    text-shadow: 0 1px 0 rgba(255,255,255,.3);
+  }
+    
+  @media (min-width: $burger-width-show)
+  {
+    width: 25vw;
+    background: none;
+    padding-top: 0px;
+    transform: none!important;
+    .menu-scroll { height: 100%; }
+  }
+} // .menu
+
+.sidebar-toggle
+{
+  display: block;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  font-size: .95em;
+
+  /* Simple hamburger */
+  .burger
+  {
+    color: $burger-color-text;
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    height: 40px;
+
+    &:before
+    {
+      position: absolute;
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+    
+    @media (min-width: $burger-width-show)
+    {
+      padding: 0;
+      display: none!important;
+    }
+
+    // Burger slices
+    span
+    {
+      display: block;
+      width: $burger-width;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+      background: $burger-color;
+      border-radius: 3px;
+      transform-origin: 4px 0px;
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  opacity 0.55s ease;
+
+      &:first-child  { transform-origin: 0% 0%; }
+      &:nth-child(3) { transform-origin: 0% 100%; }
+    }
+  }  // .burger
+
+  input
+  {
+    display: block;
+    position: absolute;
+    width: $burger-width;
+    height: $burger-width;
+    top: 5px;
+    cursor: pointer;
+    opacity: 0; // hide
+    z-index: 3; // place over hamburger
+    -webkit-touch-callout: none;
+
+    @media (min-width: $burger-width-show)
+    {
+      display: none!important;
+    }
+
+    @media (max-width: $width-medium)
+    {
+      top: -1px;
+    }
+  }
+
+  input:checked ~ .menu
+  {
+    // Slide in menu
+    transform: none;
+  }
+
+  // Transform hamburger slices into crossmark
+  input:checked ~ .burger > span:first-child
+  {
+    transform: rotate(45deg) translate(3px, -6px);
+  }
+
+  // Hide the middle burger slice
+  input:checked ~ .burger > span:nth-child(2)
+  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  // Make last slice go in other direction
+  input:checked ~ .burger > span:nth-child(3)
+  {
+    transform: rotate(-45deg) translate(3px, 6px);
+  }
+}  // #menu-toggle
+
+$burger-under: $burger-width - 15px;
+
+#sidebar-site
+{
+  @extend .sidebar-toggle;
+  left: 0px;
+  z-index: 2; // Ensure it is above page sidebar so its scrollbar works
+  
+  .burger
+  {
+    left: 20px;
+    
+    &:before
+    {
+      font-size: 13px;
+      transform: rotate(-90deg) translate(1px, -18px);
+      content: "Site";
+    }
+
+    @media (max-width: $width-medium)
+    {
+      left: 4px;
+
+      &:before
+      {
+        transform: translate(4px, $burger-under);
+      }
+    }
+  }
+  
+  input
+  {
+    left: 15px;
+
+    @media (max-width: $width-medium)
+    {
+      left: 0;
+    }
+  }
+
+  input:checked ~ .burger
+  {
+    &:before
+    {
+      transform: rotate(-90deg) translate(1px, -40px);
+
+      @media (max-width: $width-medium)
+      {
+        transform: translate(-40px, $burger-under);
+      }
+    }
+  }
+  
+  .menu
+  {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transform: translate(-100%, 0);
+  }
+}  // #sidebar-site
+
+#sidebar-page
+{
+  @extend .sidebar-toggle;
+  right: $menu-width-rel;
+
+  input
+  {
+    position: fixed;
+    right: 18px;
+
+    @media (max-width: $width-medium)
+    {
+      right: 2px;
+    }
+  }
+  
+  .burger
+  {
+    position: fixed;
+    right: 20px;
+    
+    &:before
+    {
+      font-size: 11px;
+      transform: rotate(-90deg) translate(1px, 27px);
+      content: "Page";
+    }
+
+    @media (max-width: $width-medium)
+    {
+      right: 4px;
+
+      &:before
+      {
+        transform: translate(4px, $burger-under);
+      }
+    }
+  }
+  
+  input:checked ~ .burger
+  {
+    &:before
+    {
+      transform: rotate(-90deg) translate(1px, 50px);
+
+      @media (max-width: $width-medium)
+      {
+        transform: translate(40px, $burger-under);
+      }
+    }
+  }
+
+  .menu
+  {
+    right: 0;
+    position: fixed;
+    transform: translate(100%, 0);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+}

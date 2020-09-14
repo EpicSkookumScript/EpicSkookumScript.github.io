@@ -1,0 +1,110 @@
+// Here you can easily change your sites's color scheme.
+// To give it a try, uncomment some of the lines below rebuild your blog, and see how it works.
+// If you need a handy color picker try http://hslpicker.com
+
+$skookum-orange: #f19c21;
+$skookum-blue:   #3b6aa0;
+$bright-blue:    #8bf;
+
+// Body
+$body-bar: $skookum-orange;
+
+// Main Colors
+$main-bg: #28304a !default;
+$page-bg: #1d2231;
+$article-border: #eeeeee !default;
+
+// Header
+$header-bg: $page-bg;
+
+// Title 
+$title-color:    $bright-blue;  
+//$title-color:    $skookum-orange;  //lighten($skookum-blue, 25);
+$subtitle-color: $title-color;
+
+// Main Link Colors
+$link-color:           #fd0 !default;
+$link-color-hover:     adjust-color($link-color, $lightness: 30, $saturation: 25) !default;
+$link-color-visited:   #da2 !default;  // #c92
+$link-color-active:    $bright-blue !default;
+$link-color-active-bg: rgba(64,64,128,.75) !default;
+
+//$separator-color: $skookum-orange;
+$separator-color: adjust-color($title-color, $lightness: -20%, $saturation: -30%);;
+$quote-color: $separator-color;
+
+// Tables
+$table-bg:         #556;
+$table-header-bg1: #334;
+$table-header-bg2: #223;
+$table-header:     $title-color;  //#59c;  //$title-color;
+$table-body-bg1:   #383848;
+$table-body-bg2:   #282838;
+
+// Notes
+$note-icon-clr: #ff0;
+$note-bg1:      #444;  // Grey
+$note-bg2:      #111;
+$note-info-clr: #fff;
+$note-info-bg1: #47a;  // Skookum Blue
+$note-info-bg2: #246;
+$note-warn-bg1: #721;  // Red
+$note-warn-bg2: #511;
+$note-soon-bg1: #751;  // Orange
+$note-soon-bg2: #531;
+$note-text:     #eee;
+$note-header:   #fff;
+
+$pricing-bg:        #445;
+$pricing-header-bg: #667;
+$pricing-text:      #fff;
+$pricing-text-sub:  $subtitle-color;
+
+//$footer-bg: #000000 !default;
+//$footer-bg-front: image-url('noise.png');
+//$footer-bg-back: linear-gradient(lighten($footer-bg, 8), $footer-bg, darken($footer-bg, 11));
+
+/* Navigation */
+$nav-bg: $page-bg !default;
+$nav-bg-front: none !default;
+$nav-bg-back: linear-gradient(lighten($nav-bg, 8), $nav-bg, darken($nav-bg, 11)) !default;
+$nav-color: $link-color;
+$nav-color-hover: $link-color-hover;
+$nav-color-visited: $link-color-visited;
+$nav-placeholder: desaturate(darken($nav-bg, 10), 15) !default;
+$nav-border: darken($nav-bg, 10) !default;
+$nav-border-top: lighten($nav-bg, 15) !default;
+$nav-border-bottom: darken($nav-bg, 25) !default;
+$nav-border-left: darken($nav-bg, 11) !default;
+$nav-border-right: lighten($nav-bg, 7) !default;
+
+/* Sidebar colors */
+$sidebar-bg: $page-bg;
+$sidebar-link-color: $link-color;
+$sidebar-link-color-hover: $link-color-hover;
+$sidebar-link-color-active: $link-color-active !default;
+$sidebar-color: #eef; //darken($sidebar-link-color, 20) !default;
+$sidebar-border: desaturate(darken($sidebar-bg, 7), 10) !default;
+$sidebar-border-hover: darken($sidebar-bg, 7) !default;
+$sidebar-link-color-subdued: darken($sidebar-link-color, 10) !default;
+$sidebar-link-color-subdued-hover: $sidebar-link-color-hover !default;
+$sidebar-search-text-color: #fff;
+
+.clr-white       { color: #fff; }
+.clr-bright-blue { color: $bright-blue; }
+.clr-note        { color: $note-icon-clr; }
+
+.clr-log-standard  { color: #ffffff; }  // white
+.clr-log-title     { color: #ffdd00; }  // yellow
+.clr-log-note      { color: #1aff33; }  // green
+.clr-log-system    { color: #88bbff; }  // electric blue
+.clr-log-error     { color: #ff0080; }  // red
+.clr-log-warning   { color: #ff9b32; }  // orange
+.clr-log-result    { color: #ffff40; }  // light yellow
+.clr-log-trace     { color: #c0c0ff; }  // lavender
+
+.bg-white { background: #fff; }
+.bg-black { background: #000; }
+
+// For code colors see partials\syntax.scss
+

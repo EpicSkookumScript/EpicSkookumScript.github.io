@@ -1,0 +1,64 @@
+---
+section: blog
+single: true
+
+---
+
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
+{% include head.html %}
+
+  <body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} class="wrap">
+    {% include navigation.html %}
+    <div class="grid">
+
+      <header role="banner" class="no-padding">
+        <div class="unit">
+          {% include header.html %}
+        </div>
+      </header>
+      
+      <div id="main">
+        <div id="content">
+          <div>
+            <article class="hentry" role="article">
+              {% if page.title and page.title_display != false %}
+                <header>
+                  {% if page.date %}<p class="meta"><time>{{ page.date | date_to_long_string: "ordinal", "US" }}</time></p>{% endif %}
+                  <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+                </header>
+              {% endif %}
+              {% if index %}
+                <div class="entry-content">{{ content | excerpt }}</div>
+                {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
+                {% if excerpted == 'true' %}
+                  <a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ site.excerpt_link }}</a>
+                {% endif %}
+              {% else %}
+                <div class="entry-content">{{ content }}</div>
+              {% endif %}
+              <!--<p class="meta">
+                {% include post/author.html %}
+                {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+                {% include post/categories.html %}
+              </p>-->
+              <hr>
+              <p class="meta">
+                {% if page.previous.url %}
+                  <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}"><em class ="tip">&laquo; Previous</em> {{page.previous.title}}</a>
+                {% endif %}
+                {% if page.next.url %}
+                  <a class="basic-alignment right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title}} <em class ="tip">Next &raquo;</em></a>
+                {% endif %}
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer role="contentinfo">{% include footer.html %}</footer>
+  
+  </body>
+</html>
+
+

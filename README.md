@@ -1,37 +1,15 @@
-## Welcome to GitHub Pages
+# SkookumScript Web Pages and Docs
 
-You can use the [editor on GitHub](https://github.com/EpicSkookumScript/EpicSkookumScript.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+[![The SkookumScript Home Page](SkWeb.png)](https://skookumscript.com)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+SkookumScript is a video game programming language owned by Epic Games, Inc.
 
-### Markdown
+This repository contains files used to generate the [SkookumScript web pages](https://skookumscript.com) using [Jekyll](https://jekyllrb.com/) and hosting them on GitHub (or locally running Jekyll on your computer).
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Issues and contributions
 
-```markdown
-Syntax highlighted code block
+The SkookumScript web pages are still a work in progress.
 
-# Header 1
-## Header 2
-### Header 3
+![Pages are incomplete and missing](docs/images/SkWeb-error404.jpg)
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/EpicSkookumScript/EpicSkookumScript.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Please help evolve these pages by [making requests and noting any issues](https://github.com/EpicSkookumScript/EpicSkookumScript.github.io/issues) and we'll prioritize those areas. Even better, create your own contributions then make a pull request to get it added -- see [Jekyll](https://jekyllrb.com/) to learn how.

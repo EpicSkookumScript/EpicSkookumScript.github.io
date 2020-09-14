@@ -1,0 +1,1108 @@
+.group { @include pie-clearfix; }
+
+li {
+  //outline:yellow dashed 1px;
+  margin-bottom: .25em;
+  line-height: 1.2em;
+  &:last-child {
+    margin-bottom: .33em !important;
+  }
+}
+
+body {
+  -webkit-text-size-adjust: none;
+  > div {
+    //position: relative;
+    //padding: 0 auto;
+    //margin: 0 auto;
+    > header, > nav, > footer, #content > article, #content > div > article, #content > div > section {
+      @extend .group;
+      padding-left: $pad-min;
+      padding-right: $pad-min;
+      @media only screen and (min-width: $width-narrow) {
+        padding-left: $pad-narrow;
+        padding-right: $pad-narrow;
+      }
+      @media only screen and (min-width: $width-medium) {
+        padding-left: $pad-medium;
+        padding-right: $pad-medium;
+      }
+      @media only screen and (min-width: $width-wide) {
+        padding-left: $pad-wide;
+        padding-right: $pad-wide;
+      }
+    }
+  }
+  
+  div.pagination {
+    @extend .group;
+    margin-left: $pad-min;
+    margin-right: $pad-min;
+    @media only screen and (min-width: $width-narrow) {
+      margin-left: $pad-narrow;
+      margin-right: $pad-narrow;
+      }
+    @media only screen and (min-width: $width-medium) {
+      margin-left: $pad-medium;
+      margin-right: $pad-medium;
+    }
+    @media only screen and (min-width: $width-wide) {
+      margin-left: $pad-wide;
+      margin-right: $pad-wide;
+    }
+  }
+  > header {
+    font-size: $header-font-size;
+    padding-top: $header-padding-top;
+    padding-bottom: $header-padding-bottom;
+  }
+}
+
+// Double quote font bg
+blockquote {
+  position: relative;
+  margin-top: 1.75em;
+  margin-bottom: 1.5em;
+  padding: $pop-gap;
+  clear: both;
+  display: block;
+  font-style: italic;
+  font-size: 1.2em;
+  z-index: 1;
+  //border-right: $separator-width solid $quote-color;
+  
+  p {
+    text-shadow: .25em .25em .5em #000;
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }  
+  
+  &:before {
+    content: '\201C';
+    position: absolute;
+    z-index: -1;
+    top: .25em;
+    left: -.25em;
+    color: rgba($quote-color, .4);
+    font-family: $mono;
+    font-size: 8em;
+  }
+
+  footer {
+    margin-top: 1.5em;
+    font-style: normal;
+    text-align: right;
+    a {
+      word-wrap: break-word;
+    }
+    img {
+      margin-top: -$pop-gap;
+      margin-left: $pop-gap;
+      float: right;
+    }
+  }
+
+  cite {
+    display: block;  // go to next line
+    font-size: 0.75em;
+    font-style: normal;
+    //&:before {
+    //  content: '\2014';  // em dash
+    //  padding: {right: .3em; left: .3em;}
+    //}
+  }
+  
+  @media only screen and (max-width: 767px) {
+    padding-left:  10px;
+    padding-right: 10px;
+    margin-left:  -10px;
+    margin-right: -10px;
+  }
+}
+
+.quoter  {
+  display: block;
+  font-style: normal;
+  text-align: right;
+  margin: .6em 0 .8em 0;
+}
+
+// Breakout with square brackets [skew 66.6%]
+//text-align: justify;  
+.aside66 {
+  position: relative;
+  clear: both;
+  display: block;
+  margin: 1em 1em 1.5em 1em;
+  padding: $pop-gap $pop-gap * 1.5;
+  font-size: .9em;
+  line-height: 1.33em;
+  
+  p {
+    text-shadow: .25em .25em .5em #000;
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }  
+  
+  &:before, &:after {
+      content: ' ';
+      position: absolute;
+      width: $pop-gap;
+      height: 66.6%;
+      border: 5px solid $separator-color;
+  }
+  
+  &:before {
+      top: 0;
+      left: -$pop-gap;
+      border-right: 0;
+      border-radius: 5px 0 0 5px;
+  }
+  
+  &:after {
+      bottom: 0;
+      right: -$pop-gap;
+      border-left: 0;
+      border-radius: 0 5px 5px 0;
+  }
+  
+  @media only screen and (max-width: 479px) {
+    padding-left:  10px;
+    padding-right: 10px;
+    margin-left:  -10px;
+    margin-right: -10px;
+  }
+}
+
+// Breakout with square brackets
+.aside-sq {
+  position: relative;
+  clear: both;
+  display: block;
+  margin: 1em 1em 1.5em 1em;
+  padding: $pop-gap;
+  font-size: .9em;
+  line-height: 1.33em;
+  
+  p {
+    text-shadow: .25em .25em .5em #000;
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }  
+  
+  &:before, &:after {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      width: $pop-gap;
+      height: 100%;
+      border: 5px solid $separator-color;
+  }
+  
+  &:before {
+      left: -$pop-gap;
+      border-right: 0;
+      border-radius: 5px 0 0 5px;
+  }
+  
+  &:after {
+      right: -$pop-gap;
+      border-left: 0;
+      border-radius: 0 5px 5px 0;
+  }
+  
+  footer {
+    margin-top: 1.5em;
+    text-align: right;
+    a {
+      word-wrap: break-word;
+    }
+    img {
+      margin-top: -$pop-gap;
+      margin-left: $pop-gap;
+      float: right;
+    }
+  }
+
+  cite {
+    display: block;  // go to next line
+    font-size: 0.75em;
+    &:before {
+      content: '\2014';  // em dash
+      padding: {right: .3em; left: .3em;}
+    }
+  }
+  
+  @media only screen and (max-width: 479px) {
+    padding-left:  10px;
+    padding-right: 10px;
+    margin-left:  -10px;
+    margin-right: -10px;
+  }
+}
+
+// Breakout with single line on left
+.aside-line {
+  position: relative;
+  clear: both;
+  display: block;
+  margin: 1em 1em 1.25em 1em !important;
+  padding-left: .5em;
+  line-height: 1.33em;
+  font-size: .9em;
+  border-left: 4px solid $separator-color;
+}
+
+// Default aside breakout
+.aside {
+  @extend .aside-sq;
+}
+
+
+// Pop-out with rounded corners
+.popround {
+  position: relative;
+  padding:  1.5em;
+  margin-left:  -55px;
+  margin-right: -55px;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  font-size: .95em;
+  color: $note-text;
+  text-shadow: 0px 0px 3px rgba(0,0,0,.75);
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255,255,255,.3), inset 0 -1px 0 rgba(0,0,0,.4);
+  @include gradient-bg($note-bg1, $note-bg2);
+  
+  p {
+    text-shadow: .25em .25em .5em #000;
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }  
+  
+  @media (max-width: 977px){
+    margin-left:  -$pad-wide;
+    margin-right: -$pad-wide;
+  }
+  
+  @media (max-width: 767px){
+    margin-left:  -$pad-medium;
+    margin-right: -$pad-medium;
+  }
+  
+  @media (max-width: 479px){
+    margin-left:  -$pad-narrow;
+    margin-right: -$pad-narrow;
+  }
+}
+
+.contents {
+  h1 {
+    margin: 0 !important;
+  }
+  h2, h3, h4, h5 {
+    margin: .7em 0 0 0 !important;
+    padding: 0 0 .2em 0 !important;
+  }
+  strong {
+    //outline:green dashed 1px;
+    margin-top: .5em;
+    margin-bottom: .25em;
+    display: block;
+    }      
+  ul {
+    line-height: 1.2em;
+    padding: 0 !important;
+    margin: 0 !important;
+    li {
+      //margin: 0 !important;
+      //margin-top: 2.2em;
+      //margin-bottom: .5em;
+      padding: .1em 0 .2em 0 !important;
+      border: 0 !important;
+      &:last-child {
+        //outline:green dashed 1px;
+        padding-bottom: .3em !important;
+      }
+    }
+    ul {
+      margin-left: 0 !important;
+      ul {
+        margin-left: 0 !important;
+        ul {
+          margin-left: .75em !important;
+        }    
+      }    
+    }    
+  }
+}
+
+.indent {
+  position: relative;
+  margin-left: 1em !important;
+  clear: both;
+  display: block;
+}
+
+.indent-brkt-sq {
+  position: relative;
+  padding-left: .66em !important;
+  padding-bottom: 1px !important;
+  margin-bottom: .66em !important;
+  clear: both;
+  display: block;
+  
+  &:before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    width: $pop-gap;
+    height: 100%;
+    border: 3px solid $separator-color;
+    margin-top: -.1em !important;
+    border-right: 0;
+    border-radius: 5px 0 0 5px;
+  }
+}
+
+.indent-line {
+  @extend .indent-brkt-sq;
+}
+
+.indent-error {
+  //outline:green dashed 1px;
+  color: #ff0080;
+  //font-family: $mono;
+  font-size: .95em;
+  line-height: 1.2em;
+  margin-top: -.5em;
+  @extend .indent;
+}
+
+.caption-brkt {
+  position: relative;
+  clear: both;
+  display: block;
+  margin: 1em 1em 1.25em 1em  !important;
+  padding: .33em 0 0 .75em !important;
+  line-height: 1.33em;
+  font-size: .9em;
+  font-style: italic;
+  text-shadow: .25em .25em .5em #000;
+  
+  &:before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    width: $pop-gap;
+    height: 100%;
+    border: 4px solid $separator-color;
+    margin-top: -.33em !important;
+    border-right: 0;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  @media only screen and (max-width: 479px) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+.caption-line {
+  @extend .aside-line;
+  font-style: italic;
+  text-shadow: .25em .25em .5em #000;
+}
+
+.caption-clean {
+  position: relative;
+  clear: both;
+  display: block;
+  margin: 1em 1em 1.25em 1em !important;
+  padding-left: .5em;
+  line-height: 1.33em;
+  font-size: .9em;
+  font-style: italic;
+  text-shadow: .25em .25em .5em #000;
+}
+
+.caption {
+  @extend .caption-clean;
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.embed-square {
+  @extend .embed-container;
+  padding-bottom: 100%;
+}
+
+// Change log styling
+.changelog {
+
+  // topic
+  dt {
+    font-weight: 700;
+    font-size: 1.1em;
+    line-height: 1.1em;
+    text-shadow: .075em .075em .1em #000;
+    margin-top: .33em;
+    margin-left: 1em;
+    margin-bottom: 0.33em;
+    position: relative;
+    z-index: 1;
+    
+    &:before {
+      content: '\2013';
+      position: absolute;
+      z-index: -1;
+      top: 0em;
+      left: -1em;
+    }
+  }  
+
+  // detail
+  dd {
+    margin-left: 1em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    line-height: 1.4em;
+    position: relative;
+    z-index: 1;
+  }
+
+  // detail parts
+  p {
+    margin: 0 0 .5em 0em;
+  }      
+}
+
+// Change Log Table of Contents List Styling
+.changelog-nav {
+  line-height: 1em;
+  margin: 0;
+  
+  // Contents Entry
+  li {
+    font-size: .9em;
+    display: inline;
+  }  
+  
+  a {
+    border-radius: .4em;
+    text-shadow: none;
+    padding: .15em .5em .15em .5em;
+    transition: all 0s;
+    -moz-transition: all 0s;
+    -webkit-transition: all 0s;
+    text-decoration: none;
+    display: block;
+  }
+
+  a:hover {
+    background-color: rgba(0,0,0,.5);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.5), 0 1px 0 rgba(255,255,255,.2);
+  }
+
+  a:visited {
+    color: $link-color-visited;
+  }
+  
+  a:active {
+    background-color: $link-color-active;
+  }
+}
+
+
+// Frequently Asked Questions (F.A.Q.) styling
+.faq {
+
+  //background: #a55;
+
+  // Wrapper for whole FAQ
+  //dl { }  
+
+  // FAQ - Question
+  dt {
+    font-weight: 700;
+    font-size: 1.25em;
+    line-height: 1.1em;
+    text-shadow: .075em .075em .1em #000;
+    margin-bottom: 0.75em;
+    position: relative;
+    z-index: 1;
+    
+    &:before {
+      content: 'Q';
+      position: absolute;
+      z-index: -1;
+      top: 0em;
+      left: -.25em;
+      color: rgba($quote-color, .3);
+      //font-family: $heading-font-family;
+      font-size: 1.75em;
+      text-shadow: none;
+    }
+  }  
+  
+
+  // FAQ - Whole Answer
+  dd {
+    //margin-left: 2em;  // Q&A aligned looks better than indented
+    margin-bottom: 2em;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    position: relative;
+    z-index: 1;
+    
+    &:before {
+      content: 'A';
+      position: absolute;
+      z-index: -1;
+      top: 0em;
+      left: -.25em;
+      color: rgba($quote-color, .3);
+      //font-family: $heading-font-family;
+      font-weight: 700;
+      font-size: 2.4em;
+      text-shadow: none;
+    }
+  }
+
+  // Answer Parts
+  p {
+    margin: 0 0 .5em 0em;
+  }      
+  
+  @media only screen and (max-width: 479px) {
+    dt {
+      font-size: 1.1em;
+    }  
+
+    // FAQ - Whole Answer
+    dd {
+      font-size: 1em;
+    }
+  }
+}
+
+/* Rounded inset link */
+.bubble-link {
+  a {
+    text-decoration: none;
+    transition: all 0s;
+    -moz-transition: all 0s;
+    -webkit-transition: all 0s;
+  }
+
+  a:hover {
+    display: inline;
+    position: static;
+    margin-left: -.15em;
+    margin-right: -.15em;
+    //margin-bottom: -.3em;
+    padding: .15em .15em .15em .15em;
+    border-radius: .4em;
+    background-color: rgba(0,0,0,.5);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.5), 0 1px 0 rgba(255,255,255,.2);
+  }
+}
+
+
+// Change log styling
+.defns {
+
+  // topic
+  dt {
+    font-weight: 700;
+    font-size: 1em;
+    line-height: 1em;
+    text-shadow: .075em .075em .1em #000;
+    margin-top: .33em;
+    margin-left: 1em;
+    margin-bottom: 0.33em;
+    position: relative;
+    z-index: 1;
+    
+    &:before {
+      content: '\2013';
+      position: absolute;
+      z-index: -1;
+      top: 0em;
+      left: -1em;
+    }
+  }  
+
+  // detail
+  dd {
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+    font-size: 0.9em;
+    line-height: 1em;
+    position: relative;
+    z-index: 1;
+  }
+
+  // detail parts
+  p {
+    margin: 0 0 .5em 0em;
+  }      
+}
+
+/* Releases nested list */
+.release-info {
+  line-height: 1em;
+  margin: .5em 0 1em .5em;
+  //border: 1px solid #00a;
+  
+  p {
+    margin-bottom: .25em;
+    //border: 1px solid #00a;
+  }
+  
+  // Wrapper for whole List
+  ul {
+    margin: .1em 0 .6em 1em;
+    }  
+    
+  li {
+    list-style-type: none;
+    font-weight: bold;
+    margin-top: .2em;
+    margin-bottom: 1em;
+    
+    li {
+      list-style-type: square;
+      font-weight: normal;
+      margin-left: .5em;
+      margin-bottom: .3em;
+      
+      li {
+        list-style-type: disc;
+        font-size: .925em;
+        margin-left: 0;
+        
+        li {
+          list-style-type: circle;
+        }
+      }
+    }
+  }  
+}
+
+
+/* Table of Contents List Styling */
+.toc {
+
+  line-height: 1em;
+  //margin: .5em 0 1em .5em;
+  //border: 1px solid #00a;
+  
+  // Wrapper for Whole Content List
+  ul {
+    margin: .1em 0 .33em .4em;
+    //border: 1px solid #0a0;
+    }
+  
+  // Contents Entry
+  li {
+    list-style-type: none;
+    //margin-top: .2em;
+    margin-bottom: .2em;
+    //padding: 0 .5em .15em 0;
+    //border: 1px solid #a00;
+  }  
+  
+  a {
+    //text-shadow: none;
+    text-decoration: none;
+    transition: all 0s;
+    -moz-transition: all 0s;
+    -webkit-transition: all 0s;
+  }
+
+  a:hover {
+    display: block;
+    position: relative;
+    top: -.15em;
+    left: -.3em;
+    padding: .15em .3em .15em .3em;
+    margin-bottom: -.3em;
+    margin-right: -.6em;
+    border-radius: .4em;
+    background-color: rgba(0,0,0,.5);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.5), 0 1px 0 rgba(255,255,255,.2);
+  }
+
+  a:visited {
+    color: $link-color-visited;
+  }
+  
+  a:active {
+    background-color: $link-color-active-bg;
+  }
+}
+
+/* ToC using span rather than block link */
+.tocs {
+
+  @extend .toc;
+  
+  a:hover {
+    display: inline;
+    position: static;
+    margin-left: -.3em;
+    margin-right: -.3em;
+  }
+}
+
+/* Table of Contents with styled nested list */
+.toc-levels {
+  @extend .toc;
+  
+  li {
+    font-weight: bold;
+    
+    li {
+      font-weight: normal;
+      
+      li {
+        font-size: .925em;
+      }
+    }
+  }  
+}
+
+/* ToC using span with styled nested list */
+.tocs-levels {
+  @extend .tocs;
+  
+  // Contents Entry
+  li {
+    font-weight: bold;
+    
+    li {
+      font-weight: normal;
+      
+      li {
+        font-size: .925em;
+      }
+    }
+  }  
+}
+
+/* ToC using span with styled nested list and 1.2.3 numbers */
+.tocs-nums {
+  @extend .tocs-levels;
+  counter-reset: section;
+  
+  ol {
+    counter-reset: section;
+    list-style-type: none;
+  }
+
+  li {
+    list-style-type: none;
+  }
+  
+  li::before {
+    counter-increment: section;
+    content: counters(section, ".") " ";
+  }
+}
+
+/* Option List */
+.list-brkt {
+
+  list-style-type: none;
+  margin: .75em 0 1.75em 0;
+  
+  ul {
+    font-size: .9em;
+    list-style-type: none;
+    margin-bottom: 1em;
+    
+    li {
+      @extend .indent-brkt-sq;
+    }  
+  }
+  
+  li {
+    margin-top: .25em;
+    margin-bottom: .5em;
+  }  
+}
+
+.list-bar {
+
+  list-style-type: none;
+  margin: .75em 0 1.75em 0;
+  
+  ul {
+    font-size: .9em;
+    list-style-type: none;
+    margin-bottom: 1em;
+    
+    li {
+      border-left: 4px solid $separator-color;
+      padding-left: .3em;
+    }  
+  }
+  
+  li {
+    margin-top: .25em;
+    margin-bottom: .5em;
+  }  
+}
+
+
+/* Focus */
+.focus {
+  position: relative;
+  clear: both;
+  display: block;
+  margin-bottom: 1.5em;
+  padding: .5em 1em .5em 1em;
+  color: #fff;
+  background-color: #303038;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255,255,255,.3), inset 0 -1px 0 rgba(0,0,0,.4);
+  
+  p {
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+  
+  @media only screen and (max-width: 479px) {
+    margin-left: -.8em;
+    margin-right: -.8em;
+  }
+}
+
+.focus-error {
+  background-color: #502028;
+  @extend .focus;
+}
+
+.focus-error2 {
+  background-color: #212129;
+  color: #ff0080;
+  //font-family: $mono;
+  //font-size: .9em;
+  line-height: 1.2em;
+  @extend .focus;
+}
+
+/* Tips */
+.mark {
+  font-style: normal;
+  font-weight: bold;
+  padding: .07em .3em;
+  white-space: nowrap;
+  border-radius: .5em;
+  background-color: $note-bg1;
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 1px 5px rgba(0,0,0,.5);
+  text-shadow: 0 1px 0 rgba(255,255,255,.3);
+}
+
+.tip {
+  @extend .mark;
+  background-color: #fc0;
+  color: #000;
+  //&:before {
+  //  font-weight: normal;
+  //  content: "\272A";  // Circled star
+  //}
+}
+
+.tip-info {
+  @extend .mark;
+  background-color: $note-info-bg1;
+  &:before {
+    content: "\24D8 ";  // (i) icon
+  }
+}
+
+.tip-soon {
+  @extend .mark;
+  background-color: $note-soon-bg1;
+  &:before {
+    font-weight: normal;
+    content: "\2728 ";  // Sparling stars
+  }
+}
+
+.tip-warn {
+  @extend .mark;
+  background-color: $note-warn-bg1;
+  &:before {
+    font-weight: normal;
+    content: "\1F47E ";  // Pixel invader
+  }
+}
+
+
+/* Label Wrap-around */
+.label-wrap {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+  margin-top: .75em;
+  margin-left: -55px;
+  margin-right: .4em;
+  margin-bottom: .25em;
+  padding: .1em .5em .2em 55px;
+  border-radius: 0 5px 5px 0;
+  position: relative;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255,255,255,.3), inset 0 -1px 0 rgba(0,0,0,.4);
+  @include gradient-bg($note-bg1, $note-bg2);
+  &:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    border-color: transparent $note-bg2 $note-bg2 transparent;
+    border-style: solid;
+    border-width: 5px;
+    width: 0;
+    height: 0;
+  }
+}
+
+@media (max-width: 977px){
+  .label-wrap {
+    margin-left: -$pad-wide;
+    padding-left: $pad-wide;
+  }
+}
+
+@media (max-width: 767px){
+  .label-wrap {
+    margin-left: -$pad-medium;
+    padding-left: $pad-medium;
+  }
+}
+
+@media (max-width: 479px){
+  .label-wrap {
+    margin-left: -$pad-narrow;
+    padding-left: $pad-narrow;
+  }
+}
+
+.wrap-info {
+  @include gradient-bg($note-info-bg1, $note-info-bg2);
+  &:before {
+    border-color: transparent $note-info-bg2 $note-info-bg2 transparent;
+  }
+}
+
+.wrap-warn {
+  @include gradient-bg($note-warn-bg1, $note-warn-bg2);
+  &:before {
+    border-color: transparent $note-warn-bg2 $note-warn-bg2 transparent;
+  }
+}
+
+.wrap-soon {
+  @include gradient-bg($note-soon-bg1, $note-soon-bg2);
+  &:before {
+    border-color: transparent $note-soon-bg2 $note-soon-bg2 transparent;
+  }
+}
+
+
+#content {
+  overflow: hidden;
+  > div, > article { width: 100%; }
+}
+
+
+.flex-content {
+  max-width: 100%;
+  height: auto;
+}
+
+.basic-alignment {
+  &.left { float: left; margin-right: 1.5em; }
+  &.right { float: right; margin-left: 1.5em; }
+  &.center { display:block; margin: 0 auto 1.5em; }
+  &.left, &.right { margin-bottom: .8em; }
+}
+
+@media only screen and (min-width: 550px) {
+  body > header { font-size: $header-font-size; }
+}
+#main {
+  @extend .group;
+}
+
+#content {
+  @extend .group;
+  article {
+    border-radius: 10px;
+    background: $main-bg;
+    margin: 0 20px 20px 20px;
+  }
+}
+
+@media only screen and (min-width: $width-medium) {
+  body { -webkit-text-size-adjust: auto; }
+  body > header { font-size: $header-font-size * 1.2; }
+  #main {
+    padding: 0;
+    margin: 0 auto;
+  }
+  #content {
+    overflow: visible;
+    //margin-right: $sidebar-width-medium;
+    position: relative;
+    > div, > article {
+      padding-top: $pad-medium/2;
+      padding-bottom: $pad-medium/2;
+      //float: left;
+    }
+  }
+}
+
+@media only screen and (min-width: $width-wide) {
+  body > header { font-size: $header-font-size * 1.3; }
+  //#content {
+  //  margin-right: $sidebar-width-wide;
+  //}
+  #content {
+    > div, > article {
+      padding-top: $pad-wide/2;
+      padding-bottom: 1em;
+    }
+  }
+}
+
+@if $indented-lists == false {
+  @media only screen and (min-width: $width-medium) {
+    ul, ol { margin-left: 0; }
+  }
+}
+
