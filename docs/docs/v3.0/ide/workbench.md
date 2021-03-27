@@ -199,10 +199,10 @@ See more on [Operator calls in the Primer](/docs/v3.0/#binary-and-unary-operator
 
 ### Simple routine calls
 ```js
-42.negate()          // returns -42
-42.negate            // brackets optional if no arguments
-42.between(-3, 100)  // true - call with arguments
-42.between(-3 100)   // comma between arguments optional
+42.negate()           // returns -42
+42.negate             // brackets optional if no arguments
+42.between?(-3, 100)  // true - call with arguments
+42.between?(-3 100)   // comma between arguments optional
 ```
 
 See more on [Calling routines and passing arguments in the Primer](/docs/v3.0/#calling-routines-and-passing-arguments).

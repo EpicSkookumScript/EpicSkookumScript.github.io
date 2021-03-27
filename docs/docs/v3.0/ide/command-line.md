@@ -28,7 +28,8 @@ The IDE can be called with a single identifier or file/path argument, such as dr
 
 </div>
 
-``` bat Single Argument Examples
+**Single Argument Examples**
+``` bat
 REM Browse to Master class
 C:\Skookum>SkookumIDE Master 
 
@@ -44,7 +45,7 @@ C:\Skookum>SkookumIDE Scripts\Core\Object\Mind\Master\_startup().sk
 REM Parse and execute script code in scripts.sk file
 C:\Skookum>SkookumIDE scripts.sk 
 ```
-C:\Skookum is shorthand for your SkookumIDE plugin folder, such as D:\UnrealEngine\4.15\Engine\Plugins\SkookumScript\SkookumIDE.
+`C:\Skookum` is shorthand for your SkookumIDE plugin folder, such as `D:\UnrealEngine\4.24\Engine\Plugins\SkookumScript\SkookumIDE`.
 {:.aside}
 
 ### Command-line switches
@@ -68,7 +69,8 @@ The SkookumIDE can also be called with the following switches (options):
 
 Here are some example commands to run on the command prompt. The SkookumIDE Log displays the results. 
 
-``` bat Switch Argument Examples
+**Switch Argument Examples**
+``` bat
 REM Do some math
 C:\Skookum>SkookumIDE -x 200.0 + [123.0 / 3.0]
 

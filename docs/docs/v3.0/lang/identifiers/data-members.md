@@ -46,18 +46,15 @@ All data members for a class instance ("class instance data members" or just "da
 Any instance data members are [declared](#data-member-declaration) in a `!Data.sk` file and need to be bound to an object in any object _instance constructor_. Constructors start with an `!` and their files are named `!().sk` or `!`_`ctor_name`_`().sk`. After the instance data is [initialized in a constructor](#initialization-in-constructors) you can access them in other SkookumScript code as needed. The files and their names are managed automatically for you by the SkookumIDE.
 
 - [Declared](#data-member-declaration) in `!Data.sk`:<br class="mgn_br">
-  ```Real !@hit_points
-  ```
+  `Real !@hit_points`
 - [Initialized in a constructor](#initialization-in-constructors) such as `!()`:<br class="mgn_br">
-  ```@hit_points: 100
-  ```
+  `@hit_points: 100`
 - [Used in code](#using-data-members-in-code):<br class="mgn_br">
-  ```@hit_points--
+  `@hit_points--
   if @hit_points <= 0
-    [die_horrible_death]
-  ```
+    [die_horrible_death]`
 
-  
+
 ## Class data
 
 All data members for a class ("class data members" or just "class data") must start with two "at" symbols `@@`. For example, a maximum amount of hit points for any `Enemy` class could be called `@@hit_point_max` or more fully `Enemy.@@hit_point_max`.
@@ -67,15 +64,12 @@ All data members for a class ("class data members" or just "class data") must st
 Any class data members are [declared](#data-member-declaration) in a `!DataC.sk` file and need to be bound to an object in the _class constructor_. Class constructors are named `!` and their files are named `!()C.sk`. The `C` in the file indicates that it is for a whole _class_ and not an _instance_ of a class. After the class data is [initialized in a class constructor](#initialization-in-constructors) you can access them in other SkookumScript code as needed. Again, the files and their names are managed automatically for you by the SkookumIDE.
 
 - [Declared](#data-member-declaration) in `!DataC.sk`:<br class="mgn_br">
-  ```Real !@@hit_point_max
-  ```
+  `Real !@@hit_point_max`
 - [initialized in class a constructor](#initialization-in-constructors) such as `!()`:<br class="mgn_br">
-  ```@@hit_point_max: 100.0
-  ```
+  `@@hit_point_max: 100.0`
 - [Used in code](#using-data-members-in-code):<br class="mgn_br">
-  ```@hit_points : @@random.uniform_range(
-    @@hit_point_min @@hit_point_max)
-  ```
+  `@hit_points : @@random.uniform_range(
+    @@hit_point_min @@hit_point_max)`
 
 
 ## Adding new data members
