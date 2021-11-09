@@ -55,11 +55,6 @@ $note-soon-bg2: #531;
 $note-text:     #eee;
 $note-header:   #fff;
 
-$pricing-bg:        #445;
-$pricing-header-bg: #667;
-$pricing-text:      #fff;
-$pricing-text-sub:  $subtitle-color;
-
 //$footer-bg: #000000 !default;
 //$footer-bg-front: image-url('noise.png');
 //$footer-bg-back: linear-gradient(lighten($footer-bg, 8), $footer-bg, darken($footer-bg, 11));
@@ -89,6 +84,10 @@ $sidebar-border-hover: darken($sidebar-bg, 7) !default;
 $sidebar-link-color-subdued: darken($sidebar-link-color, 10) !default;
 $sidebar-link-color-subdued-hover: $sidebar-link-color-hover !default;
 $sidebar-search-text-color: #fff;
+
+$clr-tooltip:     rgba(#071118, .95);
+//$clr-tooltip:     rgba(#1d2231, .95);
+$clr-tip-text:    #eee;
 
 .clr-white       { color: #fff; }
 .clr-bright-blue { color: $bright-blue; }

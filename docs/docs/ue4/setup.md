@@ -15,11 +15,15 @@ You must have the [Unreal Engine](https://www.unrealengine.com/what-is-unreal-en
 
 [![SkookumDemo](/images/Download/SkookumDemo-editor.jpg){:.pic-full}][UE4Install]
 
-After it is installed, choose your path to continue:
-- [Pre-built Unreal Engine from Epic Games Launcher](#epic)
-- [Custom built Unreal Engine using Visual Studio (or platform appropriate build tool)](#vs)
+Get the Unreal Engine by either:
+- **[Pre-built]** Get pre-built Unreal Engine using the Epic Games Launcher. If you you do not already have it, [get the Epic Games Launcher here][EGL]. Follow the [Epic Games Launcher Unreal Engine instructions][UEOnEGL].
+- **[Source]** Build Unreal Engine yourself with source from GitHub - [GitHub EpicGames org sign up steps][UEOnGH], [Unreal on GitHub docs][UEOnGHDocs], and once signed up [the Unreal GitHub repository][UEOnGHRep].
 
-## Epic Games Launcher users (pre-built)
+After the Unreal Engine is installed, choose your path to continue:
+- **[Pre-built]** [SkookumScript steps for pre-built Unreal Engine from Epic Games Launcher](#epic).
+- **[Source]** [Custom built Unreal Engine using Visual Studio (or platform appropriate build tool)](#vs).
+
+## Epic Games Launcher users [Pre-built]
 {:#epic}
 
 [![](/images/Download/Workflow_Butterfly.jpg){:.pic-full}][SkMarketplace]
@@ -58,7 +62,7 @@ Enjoy your updated SkookumScript UE4 Plugin! Check out our [Docs](/docs/) for mo
 4. In the list of installed plugins, locate **SkookumScript** and click **Remove**.  
 
 
-## Microsoft Visual Studio users (full source build)
+## Microsoft Visual Studio users [Source]
 {:#vs}
 
 [![](/images/Download/SkCode.jpg){:.pic-full}][SkGit]
@@ -177,7 +181,12 @@ If you have any additional issues or questions, please head over to the [Skookum
 {:.bubble-link}
 
 
+[EGL]: https://www.unrealengine.com/en-US/download
 [Sk]: /images/Sk-icon-40.png
 [SkGit]: https://github.com/EpicSkookumScript/SkookumScript-Plugin
 [SkMarketplace]: https://www.unrealengine.com/marketplace/en-US/slug/skookumscript
 [UE4Install]: https://docs.unrealengine.com/en-US/GettingStarted/Installation/index.html
+[UEOnEGL]: https://docs.unrealengine.com/en-US/Basics/InstallingUnrealEngine/index.html
+[UEOnGH]: https://www.unrealengine.com/en-US/ue4-on-github
+[UEOnGHDocs]: https://docs.unrealengine.com/en-US/ProgrammingAndScripting/ProgrammingWithCPP/DownloadingSourceCode/index.html
+[UEOnGHRep]: https://github.com/EpicGames/UnrealEngine

@@ -264,160 +264,6 @@
   }
 }
 
-/* Pricing tabs */
-
-.pricingtab {
-  width: 230px; height: 530px;
-  background: $pricing-bg;
-  color: $pricing-text;
-  margin: 5px;
-  float: left;
-  
-  -webkit-border-radius: 10px;
-     -moz-border-radius: 10px;
-          border-radius: 10px;
-  -webkit-box-shadow: 2px 2px 9px rgba(0,0,0,0.6);
-     -moz-box-shadow: 2px 2px 9px rgba(0,0,0,0.6);
-          box-shadow: 2px 2px 9px rgba(0,0,0,0.6);
-}
-
-/*Top Bar*/
-.pricingtab .top {
-  width: 230px; height: 50px;
-  background: $pricing-header-bg;
-  -webkit-border-radius: 10px 10px 0 0;
-     -moz-border-radius: 10px 10px 0 0;
-          border-radius: 10px 10px 0 0;
-}
-
-.pricingtab .top h2 {
-  color: $title-color;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  font: 900 30px/50px $heading-font-family;
-  a:visited {
-    color: $link-color;
-  }
-}
-
-/*Features*/
-.pricingtab ul {
-  list-style-type: none;
-  font: bold 16px $sans;
-  margin: 20px 0 0 45px;
-}
-
-.pricingtab ul strong {
-  font-weight: bold;
-}
-
-.pricingtab li {
-  line-height: 1.1em;
-  padding-bottom: .6em;
-  
-  em {
-    font-size: .8em;
-    color: $pricing-text-sub;
-  }
-}
-
-/*Dividing Line*/
-.pricingtab hr {
-  border: 0;
-  background-color: $separator-color;
-  color: $separator-color;
-  height: 1px;
-  width: 170px;
-  margin: 20px 0 0 30px;
-}
-
-/*Price*/
-.pricingtab h1 {
-  text-align: center;
-  font: bold 55px/1 $heading-font-family;
-  margin: 20px 0 0 0;
-}
-
-.pricingtab h1 sup {
-  font-size: 33px;
-}
-
-.pricingtab h3 {
-  text-align: center;
-  font: bold 26px/1 $heading-font-family;
-  margin: 22px 0 2px 0;
-}
-
-.pricingtab p {
-  text-align: center;
-  font: 700 18px/1 $sans;
-  color: $subtitle-color;
-}
-
-/*Button*/
-.actioncall a {
-  display: block;
-  height: 40px;
-  width: 160px;
-  color: #000;
-  margin: 25px 0 0 35px;
-  
-  text-align: center;
-  text-transform: uppercase;
-  font: 800 16px/40px $sans;
-  text-decoration: none;
-  text-shadow: none;
-  
-  -webkit-border-radius: 10px;
-     -moz-border-radius: 10px;
-          border-radius: 10px;
-  
-  background: $link-color;
-  transition: all .25s;
-  -moz-transition: all .25s;
-  -webkit-transition: all .25s;
-}
-
-.actioncall a:hover {
-  background: $link-color-hover;
-  text-shadow: 3px 3px 4px rgba(0,0,0,.5);
-}
-
-
-/*Button*/
-.bttn a {
-  //display: block;
-  //height: 40px;
-  //width: 160px;
-  color: #000;
-  margin: 1em 0 1em 0;
-  padding: .5em 1em .5em 1em;
-  
-  font-size: 1.1em;
-  font-weight: bold;
-  text-align: center;
-  //text-transform: uppercase;
-  font: $heading-font-family;
-  text-decoration: none;
-  text-shadow: none;
-  
-  -webkit-border-radius: 10px;
-     -moz-border-radius: 10px;
-          border-radius: 10px;
-  
-  background: $link-color;
-  transition: all .25s;
-  -moz-transition: all .25s;
-  -webkit-transition: all .25s;
-}
-
-.bttn a:hover {
-  background: $link-color-hover;
-  text-shadow: 3px 3px 4px rgba(0,0,0,.5);
-}
-
 
 /*Scaled Version*/
 .featured {
@@ -443,92 +289,150 @@ img {
 }
 
 
-/* Picture Gallery
+///// Tooltip styles /////
+[tooltip] {
+  position: relative;
+}
 
-//body {
-//  text-align: center;
-//}
+// Applies to all tooltips
+[tooltip]::before,
+[tooltip]::after {
+  text-transform: none;
+  font-size: .75em;
+  line-height: 1.1em;
+  text-rendering: optimizelegibility;
+  letter-spacing: 0.2px;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+[tooltip]::before {
+  content: '';
+  border: 5px solid transparent;
+  z-index: 1001; // Should be high enough
+}
+[tooltip]::after {
+  content: attr(tooltip);
+  text-align: center;
 
-ul#thumbList {
-  list-style-type: none;
-  letter-spacing: -5px;
-  padding: 0;
+  // Content sets size of the tooltips but keep reasonable
+  min-width: 9em;
+  max-width: 21em;
+  //width: 100%;
   
-  li {
-    display: inline-block;
-    margin: 8px;
-    opacity: 0.8;
-    
-    &:hover {
-      opacity: 1;
-    }
-    
-    a {
-      display: block;
-      //border: 8px solid #fff;
-      
-      img {
-        box-shadow: 0 0 8px rgba(0,0,0,0.2);
-        display: block;
-        height: 100%;
-      }
-    }
+  padding: 1ch 1.5ch;
+  border-radius: .5em;
+  box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+  background: $clr-tooltip;
+  color: $clr-tip-text;
+  z-index: 1000;
+}
+
+// Make the tooltips respond to hover
+[tooltip]:hover::before,
+[tooltip]:hover::after {
+  display: block;
+}
+
+// Don't show empty tooltips
+[tooltip='']::before,
+[tooltip='']::after {
+  display: none !important;
+}
+
+// flow: up
+[tooltip]:not([flow])::before,
+[tooltip][flow^="up"]::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: $clr-tooltip;
+}
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::after {
+  bottom: calc(100% + 5px);
+}
+[tooltip]:not([flow])::before,
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::before,
+[tooltip][flow^="up"]::after {
+  left: 50%;
+  transform: translate(-50%, -.5em);
+}
+
+// flow: down
+[tooltip][flow^="down"]::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: $clr-tooltip;
+}
+[tooltip][flow^="down"]::after {
+  top: calc(100% + 5px);
+}
+[tooltip][flow^="down"]::before,
+[tooltip][flow^="down"]::after {
+  left: 50%;
+  transform: translate(-50%, .5em);
+}
+
+// flow: left
+[tooltip][flow^="left"]::before {
+  top: 50%;
+  border-right-width: 0;
+  border-left-color: $clr-tooltip;
+  left: calc(0em - 5px);
+  transform: translate(-.5em, -50%);
+}
+[tooltip][flow^="left"]::after {
+  top: 50%;
+  right: calc(100% + 5px);
+  transform: translate(-.5em, -50%);
+}
+
+// flow: right
+[tooltip][flow^="right"]::before {
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: $clr-tooltip;
+  right: calc(0em - 5px);
+  transform: translate(.5em, -50%);
+}
+[tooltip][flow^="right"]::after {
+  top: 50%;
+  left: calc(100% + 5px);
+  transform: translate(.5em, -50%);
+  text-align: left;
+}
+
+// Tooltip keyframes
+@keyframes tooltips-vert {
+  to {
+    opacity: .9;
+    transform: translate(-50%, 0);
   }
 }
 
-ul#imageList {
-  list-style-type: none;
-  
-  li {
-    display: none;
-    
-    &:target {
-      display: block;
-      -webkit-animation: Show 0.2s 1 ease-out;
-    }
-      
-    a {
-      text-decoration: none;
-      position: absolute;
-      //display: block;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: 32px;
-      //overflow: hidden;
-      
-      &::after {
-        content: "ⓧ Close";
-        position: absolute;
-        z-index: 10;
-        bottom: 0;
-        left: 45%;
-        width: 10%;
-        height: 18px;
-        padding: 8px 0;
-        background: #000;
-        border: 2px solid #fff;
-        border-radius: 8px;
-        color: #fff;
-      }
-      
-      img {
-        z-index: 3;
-        //border: 16px solid #fff;
-        box-shadow: 0 0 16px rgba(0,0,0,0.2);
-        //display: block;
-        //width: 100%;
-      }
-    }
+@keyframes tooltips-horz {
+  to {
+    opacity: .9;
+    transform: translate(0, -50%);
   }
 }
 
-@-webkit-keyframes Show {
-  from {
-    opacity: 0;
-    zoom: 2;
-  }
+// Tooltips FX
+[tooltip]:not([flow]):hover::before,
+[tooltip]:not([flow]):hover::after,
+[tooltip][flow^="up"]:hover::before,
+[tooltip][flow^="up"]:hover::after,
+[tooltip][flow^="down"]:hover::before,
+[tooltip][flow^="down"]:hover::after {
+  animation: tooltips-vert 300ms ease-out forwards;
 }
-*/
 
+[tooltip][flow^="left"]:hover::before,
+[tooltip][flow^="left"]:hover::after,
+[tooltip][flow^="right"]:hover::before,
+[tooltip][flow^="right"]:hover::after {
+  animation: tooltips-horz 300ms ease-out forwards;
+}

@@ -27,6 +27,7 @@ SkookumScript (Sk) is a text-based superpowered scripting solution and command c
 - live creation of engaging gameplay with surprisingly few lines of code
 - native game concepts permeate the language
 - creates high performance runtimes on all platforms ![Epic Games](/images/epic-games-logo-white-sm.png){:.right-margin .height6em} 
+- full source code: compiler, IDE and runtime - and all the C++ APIs used to build it
 - same [user license as Unreal Engine][license] (If your project is already using UE4 then SkookumScript has no extra conditions and it is free.)
 
 ##### [SkookumScript is owned by Epic Games, Inc. and community maintained][acquired]
@@ -108,7 +109,7 @@ SkookumScript is lovingly crafted and maintained by [veteran game devs][team] an
 ### Additional details
 
 - [SkookumScript on the Unreal Marketplace](https://www.unrealengine.com/marketplace/en-US/product/skookumscript)
-- [SkookumScript Forum][forum]
+- <a href="https://skookum.chat"  tooltip="External link to community forum for help and support (Not affiliated with Epic Games)" flow="right">Skookum.chat Community Forum</a>
 - [SkookumScript Setup Instructions](/docs/ue4/setup/)
 - [SkookumScript Documentation](/docs/)
 - [SkookumScript GitHub](https://github.com/EpicSkookumScript/SkookumScript-Plugin)
