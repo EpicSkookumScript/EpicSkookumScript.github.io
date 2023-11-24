@@ -24,13 +24,13 @@ $subtitle-color: $title-color;
 
 // Main Link Colors
 $link-color:           #fd0 !default;
-$link-color-hover:     adjust-color($link-color, $lightness: 30, $saturation: 25) !default;
+$link-color-hover:     adjust-color($link-color, $lightness: 30%, $saturation: 25%) !default;
 $link-color-visited:   #da2 !default;  // #c92
 $link-color-active:    $bright-blue !default;
 $link-color-active-bg: rgba(64,64,128,.75) !default;
 
 //$separator-color: $skookum-orange;
-$separator-color: adjust-color($title-color, $lightness: -20%, $saturation: -30%);;
+$separator-color: adjust-color($title-color, $lightness: -20%, $saturation: -30%);
 $quote-color: $separator-color;
 
 // Tables

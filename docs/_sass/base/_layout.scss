@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .group { @include pie-clearfix; }
 
 li {
@@ -1080,8 +1082,8 @@ blockquote {
     //margin-right: $sidebar-width-medium;
     position: relative;
     > div, > article {
-      padding-top: $pad-medium/2;
-      padding-bottom: $pad-medium/2;
+      padding-top: math.div($pad-medium, 2);
+      padding-bottom: math.div($pad-medium, 2);
       //float: left;
     }
   }
@@ -1094,7 +1096,7 @@ blockquote {
   //}
   #content {
     > div, > article {
-      padding-top: $pad-wide/2;
+      padding-top: math.div($pad-wide, 2);
       padding-bottom: 1em;
     }
   }
