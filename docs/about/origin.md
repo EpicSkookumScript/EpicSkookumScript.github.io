@@ -75,14 +75,14 @@ Though I wrote much of the Sleeping Dogs engine, I only had rights to SkookumScr
 
 I was doubly in luck in that my good friend and past coworker from LucasArts [Markus Breyer][Markus] had agreed to let me crash at his house in the nearby San Rafael (nearish to GDC and where I used to live when I worked at LucasArts). He also had a pass to GDC and heard me pitch SkookumScript to many a game dev at the conference. After a while Markus couldn't help himself and started jumping in and saying, "oh and it has this interesting feature too!". A bit after the conference Markus realized he couldn't shake SkookumScript from his system and he asked if he could join me as a cofounder. I was honored and agreed.
 
-Next year at [GDC 2015](/blog/2015/03-12-GDC2015-results/) there were three of us in Agog Labs and Markus officially quit his day job at 2K Games to work on SkookumScript full time as Agog's CTO. Our booth was a bit hit.
+Next year at [GDC 2015](/blog/2015/03-12-GDC2015-results/) there were three of us in Agog Labs and Markus officially quit his day job at 2K Games to work on SkookumScript full time as Agog's CTO. Our booth was a big hit -- the conference organizers said it was the best performing 10x10 booth and that people were coming and asking where to find "those guys in lab coats" that they had heard about.
 
 [![GDC 2015 - the first SkookumScript booth](/images/blog/2015GDC-SkookumBooth-Muahahaha.jpg){:.pic-full}](/blog/2015/03-12-GDC2015-results/)
 
 GDC 2015 - the first SkookumScript booth and public release
 {:.caption}
 
-During this GDC I met with Tim Sweeney in all my mad computer scientist splendor and let him know about what we were doing with SkookumScript and how we hooked it up to Unreal. I was concerned that he might object since Epic had removed _his_ baby of UnrealScript. He listened intently and said that it sounded like SkookumScript was really game oriented and impressively tied with Unreal - it even had live support of Blueprint graphs - and he gave SkookumScript his assent.
+During this GDC I met with Tim Sweeney resplendent in my mad computer scientist lab coat and let him know about what we were doing with SkookumScript and how we hooked it up to Unreal. I wanted to ensure that it had his blessing since since Epic had recently removed _his_ baby of UnrealScript. He listened intently and said that it sounded like SkookumScript was really game oriented and impressively integrated with Unreal - it even had live support of Blueprint graphs - and he gave SkookumScript his assent.
 
 And we were off!
 
