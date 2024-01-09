@@ -156,6 +156,6 @@ If you have some favorite keyboard shortcuts for an application not yet listed, 
 [^switch_dash_slash]: Switches may use the forward slash `/` rather than the dash `-`, so `SkookumIDE -?` is the same as `SkookumIDE /?`. Note that a dash must be preceded by a space, (such as `SkookumIDE -?`), but a forward slash need not be preceded by a space (`SkookumIDE/?`).
 
 [cl_args]: https://en.wikipedia.org/wiki/Command-line_interface#Arguments "Command-line argument Wikipedia entry"
-[forum]: https://skookum.chat "The Official SkookumScript Community Forum"
+[forum]: /community/ "Discuss SkookumScript with the community"
 [VS_args]: https://msdn.microsoft.com/en-us/library/ekbzk5f8.aspx "Microsoft Visual Studio: Arguments for External Tools"
 [VS_keys]: https://msdn.microsoft.com/en-us/library/5zwses53.aspx#bkmk_assign ""Microsoft Visual Studio: Custom Keyboard Shortcut Assignment" 

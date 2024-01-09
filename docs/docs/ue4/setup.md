@@ -42,7 +42,7 @@ After the Unreal Engine is installed, choose your path to continue:
 9. If you have any issues, see if the [Resolving installation issues](/docs/ue4/setup/#resolving-installation-issues) section can help you out and then return back.
 12. Ensure [UE4 settings are optimized](#ue4-settings) for SkookumScript development.
 
-Have fun with your lovely new SkookumScript UE4 Plugin! Check out our [Docs](/docs/) for more info, and if you have any questions, comments or suggestions, please share them on the [SkookumScript Forum](https://skookum.chat/).
+Have fun with your lovely new SkookumScript UE4 Plugin! Check out our [Docs](/docs/) for more info, and if you have any questions, comments or suggestions, please share them on the [SkookumScript Forum][forum].
 
 
 ### Update an existing install to the latest version
@@ -50,7 +50,7 @@ Have fun with your lovely new SkookumScript UE4 Plugin! Check out our [Docs](/do
 
 The UE4 Marketplace will alert you when an update of the SkookumScript UE4 Plugin is available. When that occurs, click on the **SkookumScript** badge and follow the instructions. _Voilà!_
 
-Enjoy your updated SkookumScript UE4 Plugin! Check out our [Docs](/docs/) for more info, and if you have any questions, comments or suggestions, please share them on the [SkookumScript Forum](https://skookum.chat/).
+Enjoy your updated SkookumScript UE4 Plugin! Check out our [Docs](/docs/) for more info, and if you have any questions, comments or suggestions, please share them on the [SkookumScript Forum][forum].
 
 
 ### Uninstall
@@ -91,7 +91,7 @@ Our plugin resides within the **Engine/Plugins** folder, so it is a GitHub repos
 
 The IDE will create a user settings file on its first run. It's located at `Plugins/SkookumScript/SkookumIDE/SkookumIDE-user.ini`. Take a look as not all settings are exposed in the IDE user interface.
 
-Have fun with your lovely new SkookumScript UE4 Plugin! Check out our [Docs](/docs/) for more info, and if you have any questions, comments or suggestions, please share them on the [SkookumScript Forum](https://skookum.chat/).
+Have fun with your lovely new SkookumScript UE4 Plugin! Check out our [Docs](/docs/) for more info, and if you have any questions, comments or suggestions, please share them on the [SkookumScript Forum][forum].
 
 
 ### Update an existing install to the latest version
@@ -107,7 +107,7 @@ _Important:_ If you want to preserve settings from your current install, save a 
 7. Build the engine or your project. 
 8. Delete the **SkookumScript** folders in both your **Engine/Content** and **SkookumDemo/Content** folders.
 
-Enjoy your updated SkookumScript UE4 Plugin! Check out our [Docs](/docs/) for more info, and if you have any questions, comments or suggestions, please share them on the [SkookumScript Forum](https://skookum.chat/).
+Enjoy your updated SkookumScript UE4 Plugin! Check out our [Docs](/docs/) for more info, and if you have any questions, comments or suggestions, please share them on the [SkookumScript Forum][forum].
 
 
 ### Uninstall
@@ -173,7 +173,7 @@ If the SkookumIDE does not start automatically when you run the UE4 Editor or wh
 
 ### Still having issues?
 
-If you have any additional issues or questions, please head over to the [SkookumScript forum](https://skookum.chat/) and see if other users have had a similar issue resolved or create a post describing your issue and we will help walk you through it.
+If you have any additional issues or questions, please head over to the [SkookumScript forum][forum] and see if other users have had a similar issue resolved or create a post describing your issue and we will help walk you through it.
 
 ---
 [**Next >>**{:.tip} **SkookumScript Primer**](/docs/v3.0/)<br/>
@@ -182,6 +182,7 @@ If you have any additional issues or questions, please head over to the [Skookum
 
 
 [EGL]: https://www.unrealengine.com/en-US/download
+[forum]: /community/ "Discuss SkookumScript with the community"
 [Sk]: /images/Sk-icon-40.png
 [SkGit]: https://github.com/EpicSkookumScript/SkookumScript-Plugin
 [SkMarketplace]: https://www.unrealengine.com/marketplace/en-US/slug/skookumscript

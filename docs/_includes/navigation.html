@@ -14,27 +14,26 @@
 
         <h1>On this site</h1>
         <ul>
-          <li class="{% if page.section == 'home' %}current{% endif %}"><a href="{{ root_url }}/">Home page</a></li>
+          <li class="{% if page.section == 'home' %}current{% endif %}">
+            <a href="{{ root_url }}/">Home page</a></li>
           <li class="subpage{% if page.title == "What is it?" %} current{% endif %}">
             <a href="/about/">What is it?</a></li>
           <li class="subpage{% if page.title == "Show me some code!" %} current{% endif %}">
             <a href="/about/look/">Show me some code!</a></li>
-          <li class="{% if page.section == 'unreal' %}current{% endif %}"><a href="{{ root_url }}/unreal/">Unreal Engine Plugin</a></li>
+          <li class="{% if page.section == 'unreal' %}current{% endif %}">
+            <a href="{{ root_url }}/unreal/">Unreal Engine Plugin</a></li>
           <li class="subpage{% if page.title == "Awesome features" %} current{% endif %}">
             <a href="/about/features/">Awesome features</a></li>
           <li class="subpage{% if page.title == "The team" %} current{% endif %}">
             <a href="/about/team/">The team</a></li>
-          <li class="subpage{% if page.title == "SkookumScript's origin story" %} current{% endif %}">
-            <a href="/about/origin/">Origin story</a></li>
+          <li class="subpage{% if page.title == "SkookumScript's origin story and future" %} current{% endif %}">
+            <a href="/about/origin/">Origin story + future (Verse)</a></li>
           <li class="subpage{% if page.title == "Frequently asked questions" %} current{% endif %}">
             <a href="/about/faq/">F.A.Q.</a></li>
+          <li class="subpage{% if page.title == "SkookumScript Community" %} current{% endif %}">
+            <a href="/community/">Skookum Community <img src="/images/Discourse.png" alt="SkookumScript Community - Forums, etc." class="height1em"></a></li>
         </ul>
       
-        <br>
-        <p>
-          <a href="https://skookum.chat/"><span class="font1_25em" tooltip="External link to community forum (Epic unaffiliated)" flow="right"><em class="tip">Skookum.chat <img src="/images/Discourse.png" alt="Skookum.chat" class="height0_8em"></em></span></a>
-        </p>
-
         <ul>
           <h2>Docs</h2>
           <li {% if page.title == "Documentation intro" %}class="current"{% endif %}>
@@ -44,7 +43,7 @@
             <a href="/docs/ue4/setup/">UE4 Plugin setup</a>
           </li>
           <li {% if page.title == "Primer" %}class="current"{% endif %}>
-            <a href="/docs/v3.0/">Primer <em class="mark">« Start here!</em></a>
+            <a href="/docs/v3.0/"><span tooltip="Learn about SkookumScript in a single (long) page" flow="right">Primer <em class="mark">« Start here!</em></span></a>
           </li>
           <li {% if page.title == "Unreal Engine 4 Plugin quick start" %}class="current"{% endif %}>
             <a href="/docs/ue4/quickstart/">UE4 Plugin quick start</a>
@@ -101,22 +100,11 @@
               <li {% if page.title == "Communicating with remote (and local) runtimes" %}class="current"{% endif %}>
                 <a href="/docs/v3.0/ide/ip-addresses/">Remote runtime considerations<br>(often consoles, mobile and mutiplayer)</a>
               </li>
-            </ul>
+              <li {% if page.title == "Disable or remove SkookumScript in a UE4 project" %}class="current"{% endif %}>
+                <a href="/docs/ue4/disable-remove-sk/">Disable or remove SkookumScript</a>
+              </li>
           </ul>
           
-          <ul>
-            <h3>Unreal Engine 4</h3> 
-            <li {% if page.title == "Add SkookumScript to a UE4 C++ project" %}class="current"{% endif %}>
-              <a href="/docs/ue4/add-sk-ue4-c/">Add Sk to a UE4 C++ project</a>
-            </li>
-            <li {% if page.title == "Disable or remove SkookumScript in a UE4 project" %}class="current"{% endif %}>
-              <a href="/docs/ue4/disable-remove-sk/">Disable or remove SkookumScript</a>
-            </li>
-            <li {% if page.title == "Instance-specific scripts" %}class="current"{% endif %}>
-              <a href="/docs/ue4/instance-specific-scripts/">Instance-specific scripts</a>
-            </li>
-          </ul>
-    
           <ul>
             <h3>Language reference</h3>
             <ul>
@@ -213,16 +201,6 @@
               </li>
             </ul>
           </ul>
-        
-          <ul>
-            <h3>Extending SkookumScript</h3>
-            <li {% if page.title == "End-user modding" %}class="current"{% endif %}>
-              <a href="/docs/extend/modding/">End-user modding</a>
-            </li>
-            <li {% if page.title == "Calling from C++ to SkookumScript" %}class="current"{% endif %}>
-              <a href="/docs/extend/calling-from-c/">Calling from C++ to SkookumScript</a>
-            </li>
-          </ul>  
         </ul>  
       </div>  <!--menu-scroll-->
     </section>  <!--menu-->

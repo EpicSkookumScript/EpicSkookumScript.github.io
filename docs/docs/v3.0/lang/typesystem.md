@@ -34,7 +34,7 @@ SkookumScript's [type system](http://en.wikipedia.org/wiki/Type_system) (type mo
 [Duck Typing]: http://en.wikipedia.org/wiki/Duck_typing
 [Dynamic]: http://en.wikipedia.org/wiki/Type_system#Dynamic_type-checking_and_runtime_type_information
 [ergo]: /about/origin/#ergo "Ancestor language: Ergo"
-[forum]: https://skookum.chat "The Official SkookumScript Community Forum"
+[forum]: /community/ "Discuss SkookumScript with the community"
 [Inferred]: http://en.wikipedia.org/wiki/Type_inference
 [interfaces and protocols]: http://en.wikipedia.org/wiki/Protocol_%28object-oriented_programming%29 "Wikipedia article on 'interfaces and protocols'"
 [Latent Typing]: http://en.wikipedia.org/wiki/Latent_typing

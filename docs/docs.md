@@ -19,9 +19,7 @@ You can jump directly into learning SkookumScript by reading the [SkookumScript 
 
 ## There's more on the SkookumScript Forum
 
-These docs are constantly growing and evolving. If you can't find what you are looking for here, check out these [curated posts on the SkookumScript Forum][curated], which contain useful information we haven't yet added to our official docs. 
-
-If you have questions or suggestions, or a tip you think others would find useful, please post about it on the [SkookumScript Forum][forum]. Your input may guide future revisions of these docs.
+These docs are constantly growing and evolving. If you can't find what you are looking for here, check out the the [SkookumScript Forum][forum], which contains useful information we haven't yet added to our official docs. If you have questions or suggestions, or a tip you think others would find useful, please post about it.
 
 
 ---
@@ -29,6 +27,5 @@ If you have questions or suggestions, or a tip you think others would find usefu
 {:.bubble-link}
 
 
-[curated]: https://skookum.chat/t/great-curated-posts-to-learn-about-skookumscript/784
-[forum]: https://skookum.chat "The SkookumScript Community Run Forum"
+[forum]: /community/ "Discuss SkookumScript with the community"
 [syntax]: /docs/v3.0/lang/syntax/

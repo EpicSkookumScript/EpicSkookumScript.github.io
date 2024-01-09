@@ -47,5 +47,5 @@ If you would like to hear about the latest happenings with SkookumScript, sign u
 [Apple TV]: http://www.apple.com/tv/ "Apple TV"
 [SkWorkbench]: /docs/v3.0/ide/workbench/ "IDE Workbenches - Read-Eval-Print Loop (REPL)"
 [signup]: /download/ "Instructions to download and setup SkookumScript"
-[forum]: https://skookum.chat/ "SkookumScript forum"
+[forum]: /community/ "Discuss SkookumScript with the community"
 [SkUE4]: /unreal/ "SkookumScript Unreal Engine 4 plugin landing page"

@@ -6,7 +6,7 @@ categories: Unreal
 
 ---
 
-The SkookumScript UE4 Plugin was updated to version 3.0.3078 on the Unreal Engine Marketplace today. If you haven’t installed any version of the plugin yet, by Jove, now is the perfect time! <a href="https://www.unrealengine.com/marketplace/skookumscript">Download it here.</a> If you have a previous version installed, <a href="https://skookum.chat/t/3-0-3078-now-up-on-the-marketplace-with-a-caveat-though-please-read/874">read this post on the SkookumScript Forum</a> for important cleanup instructions. Enjoy!
+The SkookumScript UE4 Plugin was updated to version 3.0.3078 on the Unreal Engine Marketplace today. If you haven’t installed any version of the plugin yet, by Jove, now is the perfect time! <a href="https://www.unrealengine.com/marketplace/skookumscript">Download it here.</a> If you have a previous version installed, <a href="https://web.archive.org/web/https://skookum.chat/t/3-0-3078-now-up-on-the-marketplace-with-a-caveat-though-please-read/874">read this post on the SkookumScript Forum</a> for important cleanup instructions. Enjoy!
 
 ![](/images/blog/2016-04-26_UE4LogoBlackBackground.jpg){:.pic-full}
 
@@ -35,4 +35,4 @@ Just kidding. Here’s a quick rundown of the niftiest features that have been a
 
 <strong>Meanwhile, on GitHub: support for Unreal Engine 4.13 Preview 2</strong>
 
-We now support Unreal Engine 4.13 Preview 2, so all of you bleeding edge users are covered! Get the 4.13 compatible SkookumScript UE4 Plugin from our <a href="https://github.com/EpicSkookumScript/SkookumScript-Plugin">GitHub repository</a> or as a good old <a href="https://skookum.chat/t/downloads-latest-plugin-and-demos/419">precompiled zip file</a> for Epic Games Launcher (<a href="https://skookum.chat/t/installing-and-updating-the-skookumscript-plugin-for-unreal-engine-4/153">installation instructions</a>).
+We now support Unreal Engine 4.13 Preview 2, so all of you bleeding edge users are covered! Get the 4.13 compatible SkookumScript UE4 Plugin from our <a href="https://github.com/EpicSkookumScript/SkookumScript-Plugin">GitHub repository</a>.

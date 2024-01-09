@@ -27,7 +27,7 @@ Welcome, students of SkookumScript! You are now officially under the tutelage of
 
 ### Need more examples?
 
-For more sophisticated examples, check out the [demo projects on GitHub](https://github.com/EpicSkookumScript/SkookumScript-Demos). The [SkookumScript Forum](https://skookum.chat/) has many code examples and please post if you have questions, suggestions or requests.
+For more sophisticated examples, check out the [demo projects on GitHub](https://github.com/EpicSkookumScript/SkookumScript-Demos). The [SkookumScript Forum][forum] has many code examples and please post if you have questions, suggestions or requests.
 </div>
 
 ---
@@ -35,3 +35,5 @@ For more sophisticated examples, check out the [demo projects on GitHub](https:/
 [**<< Previous**{:.tip} **Set up a UE4 project to use SkookumScript**](/docs/ue4/setup-sk-proj/)
 {:.bubble-link}
 
+
+[forum]: /community/ "Discuss SkookumScript with the community"

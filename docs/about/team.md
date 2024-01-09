@@ -23,15 +23,17 @@ You can [help in SkookumScript's development][GitHub]. The community effort is l
 
 ### [Conan Reis](#conan-reis)
 {:#conan-reis}
-**Language Creator & Designer, Mad Computer Scientist, past Cofounder**
+**Language Creator & Designer, Chief Mad Computer Scientist, past Cofounder**
 
 ![Conan Reis photo](/images/about/conanr200p.jpg){:.no-padding .right-margin .clear-all}
 
-SkookumScript creator Conan Reis ([LinkedIn][ConanLI], [About.me][ConanMe]) is a video game industry veteran (since the early 90s) and a master at the design and implementation of video game programming languages. Since the acquisition of SkookumScript by [Epic Games][acquired] he is employed as a Principal Engineer at Epic working on secret projects related to Fortnite and the Unreal Engine -- and sprinkling SkookumScript DNA and related concepts wherever he can. His background also includes the gameplay and artificial intelligence aspects of game development, creating 3D world editors, and the guts of game engines and other development tools.
+SkookumScript creator Conan Reis ([LinkedIn][ConanLI], [X / Twitter](https://twitter.com/ConanReis), [About.me][ConanMe]) is a video game industry veteran (since the early 90s) and a master at the design and implementation of video game programming languages. He studied AI and Cognitive Science in university and his background includes the gameplay and artificial intelligence aspects of game development, creating 3D world editors, and the guts of game engines and other development tools.
 
-His programming languages include the distributed language "[Ergo]" (developed in 1995, funded in part by a $105K grant from the BC Innovation Council) and "[ChewieScript]" (developed in 2001 as the successor to the LucasArts' legendary [SCUMM] scripting language). Conan founded Agog Labs in 2004 to create SkookumScript---after initial development, [United Front Games] licensed SkookumScript to serve as the backbone of their award-winning open-world games *[Sleeping Dogs]* (2012) and *[Sleeping Dogs: Definitive Edition][SDogsDE]* (2014).
+After the [acquisition of SkookumScript by Epic Games in 2018][acquired] he became a Principal Engineer at Epic working on the "[Verse]" programming language (which he named) and designed and wrote ten of Verse's original thirteen flow control expressions (particularly concurrency) and other features and tech including coding much of its front end and backend VM and engine aspects and tooling. In addition to Verse he also worked on tech related to the Metaverse, the [Unreal Editor for Fortnite (UEFN)][UEFN], [Fortnite](https://www.fortnite.com/news) and the [Unreal Engine](https://www.unrealengine.com/) -- sprinkling SkookumScript DNA and related concepts wherever he could.
 
-Conan has shipped products for Microsoft Windows, Xbox 360 & Xbox One, Sony PlayStation 2, 3 & 4, Nintendo GameCube, Wii & Switch, Sega Genesis -- and probably a few platforms he doesn't even realize. Some of his titles include LucasArts' *[Star Wars: Bounty Hunter][SWBounty]* (2002), Wizards of the Coast's *Dragon Magazine Archive* (1999), and Electronic Arts' *Triple Play: Gold Edition* (1996). 
+[His past programming languages][origin] include the distributed language "[Ergo]" (developed in the mid 90s and funded in part by a $105K grant from the BC Innovation Council) and "[ChewieScript]" (developed in 2001 as the successor to the LucasArts' legendary [SCUMM] scripting language). Conan founded Agog Labs in 2004 to create SkookumScript---after initial development, [United Front Games] licensed SkookumScript to serve as the backbone of their award-winning open-world games *[Sleeping Dogs]* (2012) and *[Sleeping Dogs: Definitive Edition][SDogsDE]* (2014).
+
+Conan has shipped products for Microsoft Windows (3.1 and up), Xbox 360 & Xbox One, Xbox Series X/S, Sony PlayStation 2, 3, 4 & 5, Apple iOS, tvOS & macOS, Android, Nintendo GameCube, Wii & Switch and Sega Genesis -- and probably a few platforms he may not even realize. Some of his additional titles include LucasArts' *[Star Wars: Bounty Hunter][SWBounty]* (2002), Wizards of the Coast's *Dragon Magazine Archive* (1999), and Electronic Arts' *Triple Play: Gold Edition* (1996). 
 
 When the credits roll at the end of movies about science running amok, Conan's friends often point an accusing finger at him and predict that one of his creations will someday destroy the world... _or save it?_
 
@@ -45,7 +47,9 @@ _-- **Conan Reis**<br>SkookumScript creator_{:.quoter}
 
 ![Markus Breyer photo](/images/about/markusb200p.jpg ){:.no-padding .right-margin .clear-all}
 
-Technical master extraordinaire, Markus Breyer ([LinkedIn][MarkusLI]) has multiple decades of experience in the video game industry. Since the acquisition of SkookumScript by [Epic Games][acquired] he is employed as a Principal Engineer at Epic working on secret projects related to Fortnite and the Unreal Engine. He has held senior and R&D positions at Tesla and seven major game studios including 2K, LucasArts and Factor 5, where he [shipped ten AAA titles and contributed to over ten more][MarkusMoby]. He specializes in advanced math, animation, simulation, physics, rendering, collision, compression, and speaking in a charming German accent.
+Technical master extraordinaire, Markus Breyer ([LinkedIn][MarkusLI]) has multiple decades of experience in the video game industry. Since the acquisition of SkookumScript by [Epic Games][acquired] he is employed as a Principal Engineer at Epic working on the Verse language for Unreal Editor for Fortnite (UEFN) and the Unreal Engine. He joined Agog Labs fulltime as a co-founder in 2015 after seeing Conan demo SkookumScript. Markus performed wizardry with the SkookumIDE and live integration with Unreal Blueprints as well as helping to optimize SkookumScript to ridiculous speeds.
+
+He has held senior and R&D positions at Tesla and seven major game studios including 2K, LucasArts and Factor 5, where he [shipped ten AAA titles and contributed to over ten more][MarkusMoby]. He specializes in advanced math, animation, simulation, physics, rendering, collision, compression, and speaking in a charming German accent.
 
 Markus was still in high school when he created numerous video games for the Commodore 64, as well as an Amiga audio/video digitizer that was rated #1 by German magazines *Deluxe Sound* and *Deluxe View*. While a student at the Technical University of Hamburg, he ran a successful hardware development company designing and selling electronic devices, ultimately graduating *summa cum laude* with a Masters in Computer Science and Electrical Engineering. 
 
@@ -110,9 +114,11 @@ He is a passionate cat lover and future crazy old cat lady.
 [acquired]: /blog/2019/01-23-epic-aquires-agog/
 [ConanLI]: https://linkedin.com/in/conan "Conan Reis profile on LinkedIn"
 [ConanMe]: https://about.me/conanreis "Conan Reis on About.me"
+[origin]: /about/origin/
 [ChewieScript]: /about/origin/#chewiescript
 [Ergo]: /about/origin/#ergo
-[forum]: https://skookum.chat "The SkookumScript Community Run Forum"
+[Verse]: /about/origin/#verse
+[forum]: /community/ "Discuss SkookumScript with the community"
 [GitHub]: https://github.com/EpicSkookumScript/SkookumScript-Plugin "SkookumScript source on GitHub"
 [GlenLI]: https://linkedin.com/in/glencallender "Glen Callender profile on LinkedIn"
 [Google]: https://www.google.com
@@ -124,4 +130,5 @@ He is a passionate cat lover and future crazy old cat lady.
 [Sleeping Dogs]: /about/#sleeping-dogs "Showcase on Sleeping Dogs"
 [StephenLI]: https://www.linkedin.com/in/sj-coder "Stephen Johnson profile on LinkedIn"
 [SWBounty]: http://upload.wikimedia.org/wikipedia/en/c/cc/Star_Wars_Bounty_Hunter_PS2.JPG "Star Wars: Bounty Hunter box art"
+[UEFN]: https://www.unrealengine.com/en-US/free-download/uefn-unreal-editor-for-fortnite "Unreal Editor for Fortnite"
 [United Front Games]: http://www.unitedfrontgames.com/ "United Front Games home page"

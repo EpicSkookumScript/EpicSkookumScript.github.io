@@ -57,7 +57,7 @@ The SkookumIDE has a [powerful command-line interface][Sk cmd] that makes it eas
 
 - [SkookumScript UE4 Plugin installation and setup instructions](/docs/ue4/setup/)
 - [SkookumScript blog: Unreal Engine posts][SkUE4 blog]
-- Help or be helped by the growing SkookumScript community in the [Unreal Engine 4 category of the SkookumScript forum][SkUE4 forum]
+- Help or be helped by the [SkookumScript community][forum]
 
 <div markdown="1" class="note info">
 
@@ -72,7 +72,7 @@ If you aren't using the Unreal Engine, fear not! The SkookumScript Unreal Engine
 [Sk team]: /about/team/ "The SkookumScript Mad Scientist Team"
 [SkUE4 blog]: /blog/categories/unreal/ "SkookumScript blog"
 [SkUE4 docs]: /docs/integrations/ue4plugin/ "UE4 Integration in Documentation"
-[SkUE4 forum]: https://skookum.chat/c/unreal4-plugin "UE4 Category in SkookumScript forum"
+[forum]: /community/ "Discuss SkookumScript with the community"
 [SkUE4 pic2]: /images/Unreal/SkookumIDE2017-2.jpg "The SkookumIDE in action" 
 [SkUE4 pic3]: /images/Unreal/SkookumIDE2017-3.jpg "SkookumScript can easily call or be called by Blueprints and C++" 
 [SkUE4 pic4]: /images/Unreal/SkookumIDE2017-4.jpg "SkookumScript's UE4 Bindings" 

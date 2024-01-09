@@ -20,5 +20,3 @@ Well, here on the SkookumScript team we have always believed that nothing is bet
 With a sexy new look based on Unreal Engine's Slate UI system, your game development workflow will be smoother and more aggressively gorgeous than ever.
 
 The new SkookumIDE is completely free and available to <a href="https://www.unrealengine.com/marketplace/skookumscript">download</a>! 
-
-Learn more about the SkookumIDE’s amazing new features at the <a href="https://skookum.chat/t/3-0-4135-is-here-and-it-has-the-new-skookumide/1104/6">SkookumScript Forum</a>.

@@ -144,7 +144,7 @@ This means that as far as the Parser is concerned the only class type that a dat
 
 Data members that have the `raw` annotation in their declaration allow non-SkookumScript values created by the runtime (such as Unreal Engine 4 Blueprint variables) to be treated as if they were SkookumScript data members. This is for convenience and aesthetics -- they are more like accessor method calls behind the scenes.
 
-See more detail on [raw data members](https://skookum.chat/t/raw-data-members-how-do-they-work/786/1)
+See more detail on [raw data members](https://web.archive.org/web/https://skookum.chat/t/raw-data-members-how-do-they-work/786/1)
 
 
 <div class="footline" id="footline"></div>

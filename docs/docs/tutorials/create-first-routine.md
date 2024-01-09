@@ -234,8 +234,6 @@ Look around at other routines in the class hierarchy using the SkookumIDE **Clas
 *NOTE*{:.mark} Routines that have no code block body `[ ]` are defined and written in C++, though you will still see their parameters and description comments.
 </div>
 
-_If you have questions or comments about this tutorial, please post them to the [SkookumScript Forum page for this tutorial](https://skookum.chat/t/create-your-first-routine-in-a-new-project/1169)._
-
 
 ---
 [**Next >>**{:.tip} **SkookumScript UE4 Plugin Basic Tutorial 1: Create and rotate a cube Blueprint**](/docs/tutorials/create-rotate-cube/)<br/>

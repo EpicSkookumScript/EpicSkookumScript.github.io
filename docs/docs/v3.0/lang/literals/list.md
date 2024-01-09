@@ -191,7 +191,7 @@ Here are some quick examples of using lists:
 {2 4 8}.all?[item.pow2?]
 ```
 
-Also note this forum entry on [List item types and `ItemClass_`](https://skookum.chat/t/itemclass-of-list/162).
+Also note this forum entry on [List item types and `ItemClass_`](https://web.archive.org/web/https://skookum.chat/t/itemclass-of-list/162).
 
 
 <div class="footline" id="footline"></div>

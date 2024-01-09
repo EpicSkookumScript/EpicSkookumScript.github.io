@@ -76,5 +76,8 @@ If you get a "Connection timed out" error, you should be able to safely select *
 
 You may also want to look at [Resolving installation issues](/docs/ue4/setup/#resolving-installation-issues) for other ideas on getting things to work.
 
-If you have additional communication issues please head over to the [SkookumScript forum](https://skookum.chat/) and see if other users have had a similar issue resolved or create a post describing your issue and we will help walk you through it.
+If you have additional communication issues please head over to the [SkookumScript forum][forum] and see if other users have had a similar issue resolved or create a post describing your issue and we will help walk you through it.
 {:.focus}
+
+
+[forum]: /community/ "Discuss SkookumScript with the community"

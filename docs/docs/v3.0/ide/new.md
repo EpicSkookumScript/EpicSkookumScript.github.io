@@ -104,7 +104,7 @@ To add a new routine (coroutine or method):
     `_`_`coroutine_name`_
   - **Method** names begin with a lowercase letter:<br/>
     _`method_name`_
-  - **Predicate method** names begin with a lowercase letter, and are followed by a question mark (`?`). [Predicate methods](https://skookum.chat/t/predicate-methods-foo/852/2) have a `Boolean` (`true` or `false`) result.<br/>
+  - **Predicate method** names begin with a lowercase letter, and are followed by a question mark (`?`). [Predicate methods](https://web.archive.org/web/https://skookum.chat/t/predicate-methods-foo/852/2) have a `Boolean` (`true` or `false`) result.<br/>
     _`method_name`_`?`
   - **Constructor method** names are either a _default constructor_ (for either a class instance or a class) with a single exclamation mark (`!`) or a _named constructor_ (class instance only) which are preceded by an exclamation mark and begin with a lowercase letter:<br/>
     `!` or `!`_`constructor_name`_

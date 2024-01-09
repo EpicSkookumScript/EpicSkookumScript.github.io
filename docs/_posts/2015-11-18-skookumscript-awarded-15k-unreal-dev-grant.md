@@ -21,18 +21,18 @@ Reached for comment in his subterranean lab somewhere in Canada, Agog Labs CEO a
 _-- [**Conan Reis**](/about/team/#conan-reis)<br>SkookumScript creator and CEO of Agog Labs Inc._{:.quoter}
 
 
-![Sk on the UE4 editor toolbar](https://skookum.chat/uploads/default/original/1X/66b1a9f384ff8438ebff9bf507d2cb325ef12128.PNG){:.pic-full){:.pic-full}
+![Sk on the UE4 editor toolbar](/images/docs/SkIDE-toolbar-sk-connected.png)
 
 The button Unreal Engine 4 developers won't want to live without.
 {:.caption}
 
 This grant further bolsters Epic Games' enthusiastic support for SkookumScript. Epic has been working with Agog Labs for several months to ready the SkookumScript Unreal Engine 4 Plugin for release on the Unreal Marketplace—its official release date has yet to be set, but the official Agog Labs Magic 8-Ball repeatedly insists **IT IS CERTAIN**{:.mark} and **YOU MAY RELY ON IT**{:.mark}. Stay tuned for more good news about SkookumScript!
 
-To learn more about the SkookumScript Unreal Engine 4 Plugin, see the [UE4 landing page][SkUE4]. To get the SkookumScript UE4 plugin now, go to the [Download page][signup] or the [SkookumScript plugin page on the Unreal Marketplace][SkMp]. If you would like to hear about the latest happenings with SkookumScript, sign up for the [SkookumScript forum][forum].
+To learn more about the SkookumScript Unreal Engine 4 Plugin, see the [UE4 landing page][SkUE4]. To get the SkookumScript UE4 plugin now, go to the [SkookumScript plugin page on the Unreal Marketplace][SkMp]. If you would like to hear about the latest happenings with SkookumScript go to the [SkookumScript forum][forum].
 {:.focus}
 
 [EpicSkGrant]: https://www.unrealengine.com/blog/epic-games-awards-150000-in-unreal-dev-grants
-[forum]: https://skookum.chat "The SkookumScript Community Run Forum"
+[forum]: /community/ "Discuss SkookumScript with the community"
 [signup]: /download/ "Instructions to download and setup SkookumScript"
 [SkMp]: https://www.unrealengine.com/marketplace/skookumscript
 [SkUE4]: /unreal/ "SkookumScript Unreal Engine 4 plugin landing page"

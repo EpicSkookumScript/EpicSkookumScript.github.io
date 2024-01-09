@@ -79,7 +79,7 @@ SkookumScript is already notoriously nifty, and it is always being improved. The
 
 
 [setup]: /docs/ue4/setup/ "Download and setup SkookumScript UE4 plugin"
-[forum]: https://skookum.chat "The SkookumScript Community Run Forum"
+[forum]: /community/ "Discuss SkookumScript with the community"
 [license]: https://www.unrealengine.com/en-US/eula
 [SkookumScript team]: /about/team/ "The SkookumScript Team"
 [Smalltalk]: http://en.wikipedia.org/wiki/Smalltalk "Smalltalk - Wikipedia"

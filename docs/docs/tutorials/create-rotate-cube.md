@@ -74,10 +74,6 @@ branch [_rotate]
 ]
 {% endhighlight %}
 
-<div markdown="1" class="aside">
-Learn more about the `branch` command [here](https://skookum.chat/t/branch-command-explained/118).
-</div>
-
 {:start="16"}
 16. Press F7 to compile.
 
@@ -85,7 +81,7 @@ Learn more about the `branch` command [here](https://skookum.chat/t/branch-comma
 
 Stay Skookum!
 
-_Special thanks to [@Gigantoad](https://skookum.chat/users/gigantoad) for suggesting the basic problem, and to [@error454](https://skookum.chat/users/error454) for suggesting a solution!_
+_Special thanks to SkookumScript user `@Gigantoad` for suggesting the basic problem, and to `@error454` for suggesting a solution!_
 
 ---
 [**Next >>**{:.tip} **SkookumScript UE4 Plugin Basic Tutorial 2: Spawn cubes dynamically and manipulate them**](/docs/tutorials/spawn-cubes/)<br/>

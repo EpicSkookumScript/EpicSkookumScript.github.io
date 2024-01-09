@@ -32,5 +32,5 @@ If you would like to hear about the latest happenings with SkookumScript, sign u
 
 
 [signup]: /download/ "Instructions to download and setup SkookumScript"
-[forum]: https://skookum.chat/ "SkookumScript forum"
+[forum]: /community/ "Discuss SkookumScript with the community"
 [SkUE4]: /unreal/ "SkookumScript Unreal Engine 4 plugin landing page"

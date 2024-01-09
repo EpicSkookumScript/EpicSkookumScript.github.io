@@ -109,11 +109,12 @@ SkookumScript is lovingly crafted and maintained by [veteran game devs][team] an
 ### Additional details
 
 - [SkookumScript on the Unreal Marketplace](https://www.unrealengine.com/marketplace/en-US/product/skookumscript)
-- <a href="https://skookum.chat"  tooltip="External link to community forum for help and support (Not affiliated with Epic Games)" flow="right">Skookum.chat Community Forum</a>
+- [SkookumScript Community Forum][forum]
 - [SkookumScript Setup Instructions](/docs/ue4/setup/)
 - [SkookumScript Documentation](/docs/)
 - [SkookumScript GitHub](https://github.com/EpicSkookumScript/SkookumScript-Plugin)
-- [SkookumScript Issue Reporting](https://github.com/EpicSkookumScript/SkookumScript-Plugin/issues)
+- [SkookumIDE GitHub](https://github.com/EpicSkookumScript/SkookumIDE)
+- [SkookumScript Demos GitHub](https://github.com/EpicSkookumScript/SkookumScript-Demos)
 
 [**Next >>**{:.tip} **Learn more about SkookumScript**](/about/)
 {:.bubble-link}
@@ -121,6 +122,6 @@ SkookumScript is lovingly crafted and maintained by [veteran game devs][team] an
 
 [acquired]: /blog/2019/01-23-epic-aquires-agog/
 [death-tick]: https://error454.com/2017/03/09/the-death-of-tick-ue4-the-future-of-programming/ "The death of tick"
-[forum]: https://skookum.chat "The SkookumScript Community Run Forum"
+[forum]: /community/ "Discuss SkookumScript with the community"
 [license]: https://www.unrealengine.com/en-US/eula "Unreal End User License"
 [team]: /about/team/ "The SkookumScript Team - past and present"

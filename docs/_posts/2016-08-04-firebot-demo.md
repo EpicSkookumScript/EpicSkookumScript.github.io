@@ -15,5 +15,3 @@ Learn how to use SkookumScript in C++ projects! Learn how to create custom C++ a
 Prometheus, eat your heart out. 
 {:.caption}
 
-Download FireBot now from the <a href="https://skookum.chat/t/downloads-latest-plugin-and-demos/419">SkookumScript Forum</a>. Enjoy!
-

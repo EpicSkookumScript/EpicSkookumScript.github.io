@@ -45,7 +45,7 @@ The above `triple` closure infers the `Integer` return class, and it is the same
     ]
 ```
 
-See some closure-related info including [closure sample code on the SkookumScript forum](https://skookum.chat/t/closure-sample-code/149/2).
+See some closure-related info including [closure sample code on the SkookumScript forum](https://web.archive.org/web/https://skookum.chat/t/closure-sample-code/149/2).
 
 
 ### Inferring type from context

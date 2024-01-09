@@ -41,7 +41,7 @@ _Have a question that is not answered here? Put it to us in the [SkookumScript f
 {: .faq}
 <span id="qst-skookum"/>What does "skookum" mean?
 
-  : "Skookum" is Canadian for large, powerful, excellent, first-rate, and generally *awesome*. It has its origins in <a href="https://en.wikipedia.org/wiki/Chinook_Jargon" title="Chinook Jargon on Wikipedia">Chinook jargon</a> of the U.S. Pacific Northwest and Canada's West Coast, where SkookumScript creator Conan Reis grew up and SkookumScript development originated. (Also see <a href="http://en.wikipedia.org/wiki/Skookum#Principal_meaning" title="Wikipedia article on meaning of the word 'skookum'">Wikipedia</a> and <a href="http://dictionary.reference.com/browse/skookum" title="Dictionary.com entry for 'skookum'">Dictionary.com)
+  : "Skookum" means well constructed, powerful, excellent, tasty, first-rate, and generally *awesome*. It has its origins in <a href="https://en.wikipedia.org/wiki/Chinook_Jargon" title="Chinook Jargon on Wikipedia">Chinook jargon</a> of the U.S. Pacific Northwest and Canada's West Coast, where SkookumScript creator [Conan Reis] grew up and SkookumScript development originated. (Also see <a href="http://en.wikipedia.org/wiki/Skookum#Principal_meaning" title="Wikipedia article on meaning of the word 'skookum'">Wikipedia</a> and <a href="http://dictionary.reference.com/browse/skookum" title="Dictionary.com entry for 'skookum'">Dictionary.com)
   
 <span id="qst-oob"/>Can SkookumScript be used "out-of-the-box"?
 
@@ -218,7 +218,7 @@ _Have a question that is not answered here? Put it to us in the [SkookumScript f
     You can also choose to use the efficient C++ core libraries which are used as fundamental building blocks for SkookumScript. This can kick-start your own development and ensure that it is very easy for your engine to communicate with the SkookumScript runtime.
     {:.aside}
 
-<span id="qst-integration"/>How long will it take to initially integrate SkookumScript into my project?
+<span id="qst-integration"/>How long will it take to initially integrate SkookumScript into my non-Unreal project/engine?
 
   : Integrating SkookumScript with its C++ API is fairly simple and fast—possibly just a couple of hours. Call a few functions (and optionally override some methods) with your project-specific preferences and tech.  Place `SkookumScript::init()` and `SkookumScript::deinit()` in appropriate locations. Add `SkookumScript::update()` to your update loop.
   
@@ -235,7 +235,7 @@ _Have a question that is not answered here? Put it to us in the [SkookumScript f
 [Duck Typing]: http://en.wikipedia.org/wiki/Duck_typing
 [Dynamic]: http://en.wikipedia.org/wiki/Type_system#Dynamic_type-checking_and_runtime_type_information
 [ergo]: /about/origin/#ergo "Ancestor language: Ergo"
-[forum]: https://skookum.chat "The SkookumScript Community Run Forum"
+[forum]: /community/ "Discuss SkookumScript with the community"
 [Inferred]: http://en.wikipedia.org/wiki/Type_inference
 [interfaces and protocols]: http://en.wikipedia.org/wiki/Protocol_%28object-oriented_programming%29 "Wikipedia article on 'interfaces and protocols'"
 [Latent Typing]: http://en.wikipedia.org/wiki/Latent_typing

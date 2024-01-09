@@ -50,7 +50,7 @@ When you Skookify your UE4 project, this is what happens:
 
 ### Some assembly may be required
 
-It is possible that the analysis and generation of corresponding SkookumSript code could have some problems. There can be [duplicate names](#generated-rename) or other issues that may need to be resolved by hand. If this occurs and you have trouble getting your project to generate valid initial SkookumScript code or getting up and running, please seek help on the [SkookumScript Forum](https://skookum.chat/) where the SkookumScript team and other SkookumScript users can lend a hand.
+It is possible that the analysis and generation of corresponding SkookumSript code could have some problems. There can be [duplicate names](#generated-rename) or other issues that may need to be resolved by hand. If this occurs and you have trouble getting your project to generate valid initial SkookumScript code or getting up and running, please seek help on the [SkookumScript Forum][forum] where the SkookumScript team and other SkookumScript users can lend a hand.
 </div>
 
 
@@ -113,3 +113,6 @@ Project Sk Scripts | | &#10004;
 [**Next >>**{:.tip} **Tutorials**](/docs/tutorials/)<br/>
 [**<< Previous**{:.tip} **Unreal Engine 4 Plugin quick start**](/docs/ue4/quickstart/)
 {:.bubble-link}
+
+
+[forum]: /community/ "Discuss SkookumScript with the community"

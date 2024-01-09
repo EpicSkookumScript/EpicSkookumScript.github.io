@@ -10,7 +10,11 @@ sharing: false
 
 #### SkookumScript UE4 Plugin Basic Tutorial 3
 
-This tutorial is currently in transit -- see it on the [SkookumScript Forum](https://skookum.chat/t/basic-tutorial-3-create-skookum-nodes-for-use-in-blueprints/818).
+__Community Forum Skookum.chat Gone!__{: .hdr}<br>
+Alas - this post is erased from existence...<br/>
+<br/>
+Try the [SkookumScript Community](/community/).<br/>
+{: .note .warning}
 
 
 ---

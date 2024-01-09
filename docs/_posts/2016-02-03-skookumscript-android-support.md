@@ -28,6 +28,6 @@ What can we say? SkookumScript is an extremely supportive language. We will be a
 
 ![](/images/blog/android-logo.jpg){:.pic-full}
 
-Our latest release includes many more improvements and fixes—<a href="https://skookum.chat/t/3-0-2234-beta-brings-skookumscript-to-your-android-device/518" target="skf">full details on the SkookumScript Forum</a>.
+Our latest release includes many more improvements and fixes—<a href="https://web.archive.org/web/https://skookum.chat/t/3-0-2234-beta-brings-skookumscript-to-your-android-device/518" target="skf">full details on the SkookumScript Forum</a>.
 
  
